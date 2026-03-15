@@ -2,17 +2,13 @@
 
 import { useState, useMemo } from 'react';
 import { products, categories } from '@/data/products';
-import type { Product } from '@/data/products';
 import ProductCard from '@/components/products/ProductCard';
-import QuickViewModal from '@/components/products/QuickViewModal';
 
 type SortKey = 'default' | 'price-asc' | 'price-desc' | 'name' | 'rating';
 
 export default function CollectionsPage() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [sort, setSort] = useState<SortKey>('default');
-  const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
-  const [filtersOpen, setFiltersOpen] = useState(false);
 
   const filtered = useMemo(() => {
     let list = activeCategory === 'all'
@@ -94,11 +90,7 @@ export default function CollectionsPage() {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {filtered.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                onQuickView={setQuickViewProduct}
-              />
+              <ProductCard key={product.id} product={product} />
             ))}
           </div>
         )}
@@ -124,8 +116,6 @@ export default function CollectionsPage() {
           </div>
         </div>
       </div>
-
-      <QuickViewModal product={quickViewProduct} onClose={() => setQuickViewProduct(null)} />
     </>
   );
 }

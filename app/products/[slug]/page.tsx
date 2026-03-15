@@ -67,7 +67,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
           <div className="space-y-4">
             {/* Main image */}
             <div className="aspect-square bg-[#141414] border border-zinc-800 rounded-xl overflow-hidden relative">
-              <ProductPlaceholder name={product.name} />
+              <ProductPlaceholder name={product.name} src={product.images[activeImage]} />
               {product.isNew && (
                 <div className="absolute top-4 right-4">
                   <Badge variant="new">חדש</Badge>
@@ -82,7 +82,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
 
             {/* Thumbnails */}
             <div className="flex gap-3">
-              {product.images.map((_, i) => (
+              {product.images.map((img, i) => (
                 <button
                   key={i}
                   onClick={() => setActiveImage(i)}
@@ -90,7 +90,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                     activeImage === i ? 'border-[#c8a84a]' : 'border-zinc-800 hover:border-zinc-600'
                   }`}
                 >
-                  <ProductPlaceholder name={`${product.name} ${i + 1}`} small />
+                  <ProductPlaceholder name={`${product.name} ${i + 1}`} src={img} small />
                 </button>
               ))}
             </div>

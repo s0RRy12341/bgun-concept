@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import type { Product } from '@/data/products';
 import { useCart } from '@/context/CartContext';
@@ -11,11 +10,9 @@ import ProductPlaceholder from './ProductPlaceholder';
 
 interface ProductCardProps {
   product: Product;
-  onQuickView?: (product: Product) => void;
 }
 
-export default function ProductCard({ product, onQuickView }: ProductCardProps) {
-  const [hovered, setHovered] = useState(false);
+export default function ProductCard({ product }: ProductCardProps) {
   const { addItem } = useCart();
   const { toggleItem, isInWishlist } = useWishlist();
   const inWishlist = isInWishlist(product.id);
@@ -25,11 +22,7 @@ export default function ProductCard({ product, onQuickView }: ProductCardProps) 
     : null;
 
   return (
-    <div
-      className="group relative bg-[#1a1a1a] border border-zinc-800 rounded-lg overflow-hidden transition-all duration-300 hover:border-zinc-600 hover:shadow-xl hover:shadow-black/40"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
+    <div className="group relative bg-[#1a1a1a] border border-zinc-800 rounded-lg overflow-hidden transition-all duration-300 hover:border-zinc-600 hover:shadow-xl hover:shadow-black/40">
       {/* Badges */}
       <div className="absolute top-3 right-3 z-10 flex flex-col gap-1">
         {product.isNew && <Badge variant="new">חדש</Badge>}
@@ -63,31 +56,7 @@ export default function ProductCard({ product, onQuickView }: ProductCardProps) 
       {/* Image */}
       <Link href={`/products/${product.slug}`} className="block">
         <div className="relative aspect-square overflow-hidden bg-zinc-900">
-          <div
-            className="absolute inset-0 transition-transform duration-500"
-            style={{ transform: hovered ? 'scale(1.05)' : 'scale(1)' }}
-          >
-            <ProductPlaceholder name={product.name} />
-          </div>
-
-          {/* Quick view overlay */}
-          <div
-            className={`absolute inset-0 bg-black/50 flex items-center justify-center transition-opacity duration-200 ${
-              hovered ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            {onQuickView && (
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  onQuickView(product);
-                }}
-                className="bg-white text-black px-5 py-2.5 rounded-md text-sm font-bold hover:bg-[#c8a84a] transition-colors"
-              >
-                צפייה מהירה
-              </button>
-            )}
-          </div>
+          <ProductPlaceholder name={product.name} src={product.images[0]} />
         </div>
       </Link>
 
@@ -116,7 +85,7 @@ export default function ProductCard({ product, onQuickView }: ProductCardProps) 
 
           <button
             onClick={() => addItem(product, 1)}
-            className="bg-zinc-800 hover:bg-[#c8a84a] hover:text-black text-white p-2 rounded-md transition-all duration-200 group/btn"
+            className="bg-zinc-800 hover:bg-[#c8a84a] hover:text-black text-white p-2 rounded-md transition-all duration-200"
             aria-label="הוסף לעגלה"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

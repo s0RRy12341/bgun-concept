@@ -1,24 +1,29 @@
+import Image from 'next/image';
+
 interface ProductPlaceholderProps {
   name: string;
+  src?: string;
   small?: boolean;
   className?: string;
 }
 
-const colors = [
-  'from-zinc-800 to-zinc-900',
-  'from-neutral-800 to-zinc-900',
-  'from-stone-800 to-zinc-900',
-];
-
-export default function ProductPlaceholder({ name, small = false, className = '' }: ProductPlaceholderProps) {
-  const colorIndex = name.length % colors.length;
-  const gradient = colors[colorIndex];
+export default function ProductPlaceholder({ name, src, small = false, className = '' }: ProductPlaceholderProps) {
+  if (src) {
+    return (
+      <div className={`w-full h-full relative ${className}`}>
+        <Image
+          src={src}
+          alt={name}
+          fill
+          className="object-cover"
+          sizes={small ? '80px' : '(max-width: 768px) 100vw, 50vw'}
+        />
+      </div>
+    );
+  }
 
   return (
-    <div
-      className={`w-full h-full bg-gradient-to-br ${gradient} flex flex-col items-center justify-center ${className}`}
-    >
-      {/* Tactical crosshair icon */}
+    <div className={`w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-900 flex flex-col items-center justify-center ${className}`}>
       <svg
         className={`${small ? 'w-6 h-6' : 'w-10 h-10'} text-zinc-600 mb-2`}
         fill="none"

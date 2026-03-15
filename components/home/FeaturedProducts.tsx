@@ -1,15 +1,9 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
 import { getFeaturedProducts } from '@/data/products';
-import type { Product } from '@/data/products';
 import ProductCard from '@/components/products/ProductCard';
-import QuickViewModal from '@/components/products/QuickViewModal';
 
 export default function FeaturedProducts() {
   const products = getFeaturedProducts();
-  const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
 
   return (
     <section className="py-24 bg-[#0a0a0a]">
@@ -38,11 +32,7 @@ export default function FeaturedProducts() {
         {/* Product grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {products.map((product) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              onQuickView={setQuickViewProduct}
-            />
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
 
@@ -71,8 +61,6 @@ export default function FeaturedProducts() {
           ))}
         </div>
       </div>
-
-      <QuickViewModal product={quickViewProduct} onClose={() => setQuickViewProduct(null)} />
     </section>
   );
 }
