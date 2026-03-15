@@ -6,21 +6,21 @@ export default function FeaturedProducts() {
   const products = getFeaturedProducts();
 
   return (
-    <section className="py-24 bg-[#0a0a0a]">
+    <section className="py-24 bg-[#f7f5ee]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex items-end justify-between mb-12">
           <div>
-            <p className="text-[#c8a84a] font-semibold text-sm tracking-widest uppercase mb-2">
+            <p className="text-[#b59d5a] font-semibold text-sm tracking-widest uppercase mb-2">
               המוצרים שלנו
             </p>
-            <h2 className="text-white font-black text-4xl sm:text-5xl">
+            <h2 className="text-black font-black text-4xl sm:text-5xl">
               נרתיקים מובחרים
             </h2>
           </div>
           <Link
             href="/collections"
-            className="hidden sm:flex items-center gap-2 text-zinc-400 hover:text-[#c8a84a] font-medium transition-colors"
+            className="hidden sm:flex items-center gap-2 text-zinc-500 hover:text-[#b59d5a] font-medium transition-colors"
           >
             <span>לכל המוצרים</span>
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -40,7 +40,7 @@ export default function FeaturedProducts() {
         <div className="text-center mt-10 sm:hidden">
           <Link
             href="/collections"
-            className="inline-block bg-zinc-800 hover:bg-zinc-700 text-white px-8 py-3 rounded-md font-bold transition-colors"
+            className="inline-block bg-[#e8e4d8] hover:bg-[#ddd8cc] text-black px-8 py-3 rounded-md font-bold transition-colors"
           >
             לכל המוצרים
           </Link>

@@ -27,15 +27,15 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a]">
+    <div className="min-h-screen bg-white">
       {/* Hero */}
-      <div className="bg-[#0f0f0f] border-b border-zinc-800 py-14">
+      <div className="bg-[#f7f5ee] border-b border-[#e0d9c8] py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-[#c8a84a] font-semibold text-sm tracking-widest uppercase mb-3">
+          <p className="text-[#b59d5a] font-semibold text-sm tracking-widest uppercase mb-3">
             יצירת קשר
           </p>
-          <h1 className="text-white font-black text-5xl mb-4">דבר איתנו</h1>
-          <p className="text-zinc-400 text-xl">
+          <h1 className="text-black font-black text-5xl mb-4">דבר איתנו</h1>
+          <p className="text-zinc-600 text-xl">
             שאלה על מוצר? רוצה הזמנה מותאמת אישית? אנחנו כאן.
           </p>
         </div>
@@ -46,7 +46,7 @@ export default function ContactPage() {
           {/* Contact info */}
           <div className="lg:col-span-2 space-y-8">
             <div>
-              <h2 className="text-white font-bold text-2xl mb-6">פרטי יצירת קשר</h2>
+              <h2 className="text-black font-bold text-2xl mb-6">פרטי יצירת קשר</h2>
               <div className="space-y-5">
                 {[
                   {
@@ -77,12 +77,12 @@ export default function ContactPage() {
                     target={item.href.startsWith('http') ? '_blank' : undefined}
                     rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   >
-                    <div className="w-12 h-12 bg-[#141414] border border-zinc-800 rounded-xl flex items-center justify-center text-zinc-400 group-hover:border-[#c8a84a]/40 group-hover:text-[#c8a84a] transition-all flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#f7f5ee] border border-[#e0d9c8] rounded-xl flex items-center justify-center text-zinc-600 group-hover:border-[#b59d5a]/40 group-hover:text-[#b59d5a] transition-all flex-shrink-0">
                       {item.icon}
                     </div>
                     <div>
-                      <p className="text-zinc-500 text-xs">{item.label}</p>
-                      <p className="text-white font-medium group-hover:text-[#c8a84a] transition-colors">
+                      <p className="text-zinc-400 text-xs">{item.label}</p>
+                      <p className="text-black font-medium group-hover:text-[#b59d5a] transition-colors">
                         {item.value}
                       </p>
                     </div>
@@ -93,13 +93,13 @@ export default function ContactPage() {
 
             {/* Social */}
             <div>
-              <h3 className="text-white font-bold text-lg mb-4">עקבו אחרינו</h3>
+              <h3 className="text-black font-bold text-lg mb-4">עקבו אחרינו</h3>
               <div className="flex gap-3">
                 <a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-[#141414] border border-zinc-800 hover:border-[#c8a84a]/40 rounded-xl px-4 py-3 text-zinc-400 hover:text-[#c8a84a] transition-all text-sm"
+                  className="flex items-center gap-2 bg-[#f7f5ee] border border-[#e0d9c8] hover:border-[#b59d5a]/40 rounded-xl px-4 py-3 text-zinc-600 hover:text-[#b59d5a] transition-all text-sm"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -110,7 +110,7 @@ export default function ContactPage() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-[#141414] border border-zinc-800 hover:border-[#c8a84a]/40 rounded-xl px-4 py-3 text-zinc-400 hover:text-[#c8a84a] transition-all text-sm"
+                  className="flex items-center gap-2 bg-[#f7f5ee] border border-[#e0d9c8] hover:border-[#b59d5a]/40 rounded-xl px-4 py-3 text-zinc-600 hover:text-[#b59d5a] transition-all text-sm"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z" />
@@ -121,12 +121,12 @@ export default function ContactPage() {
             </div>
 
             {/* Response time note */}
-            <div className="bg-[#141414] border border-zinc-800 rounded-xl p-5">
+            <div className="bg-[#f7f5ee] border border-[#e0d9c8] rounded-xl p-5">
               <div className="flex items-start gap-3">
                 <span className="text-2xl">⚡</span>
                 <div>
-                  <h4 className="text-white font-semibold mb-1">זמן תגובה</h4>
-                  <p className="text-zinc-400 text-sm leading-relaxed">
+                  <h4 className="text-black font-semibold mb-1">זמן תגובה</h4>
+                  <p className="text-zinc-600 text-sm leading-relaxed">
                     אנחנו מגיבים לרוב הפניות תוך 24 שעות בימי עסקים.
                     לפניות דחופות — ניתן לפנות ישירות לאימייל.
                   </p>
@@ -138,15 +138,15 @@ export default function ContactPage() {
           {/* Form */}
           <div className="lg:col-span-3">
             {submitted ? (
-              <div className="bg-[#141414] border border-green-700/40 rounded-2xl p-12 text-center">
+              <div className="bg-[#f7f5ee] border border-green-300 rounded-2xl p-12 text-center">
                 <div className="text-6xl mb-6">✅</div>
-                <h2 className="text-white font-black text-3xl mb-3">ההודעה נשלחה!</h2>
-                <p className="text-zinc-400 text-lg mb-8">
+                <h2 className="text-black font-black text-3xl mb-3">ההודעה נשלחה!</h2>
+                <p className="text-zinc-600 text-lg mb-8">
                   תודה שפנית אלינו. ניצור קשר בהקדם האפשרי.
                 </p>
                 <button
                   onClick={() => { setSubmitted(false); setForm({ name: '', email: '', phone: '', subject: '', message: '' }); }}
-                  className="bg-[#c8a84a] hover:bg-[#d4b86a] text-black px-8 py-3 rounded-md font-bold transition-colors"
+                  className="bg-[#b59d5a] hover:bg-[#c4ad6a] text-black px-8 py-3 rounded-md font-bold transition-colors"
                 >
                   שלח הודעה נוספת
                 </button>
@@ -154,54 +154,54 @@ export default function ContactPage() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="bg-[#141414] border border-zinc-800 rounded-2xl p-8 space-y-5"
+                className="bg-[#f7f5ee] border border-[#e0d9c8] rounded-2xl p-8 space-y-5"
               >
-                <h2 className="text-white font-bold text-2xl mb-6">שלח הודעה</h2>
+                <h2 className="text-black font-bold text-2xl mb-6">שלח הודעה</h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-zinc-300 text-sm font-medium mb-2">שם מלא *</label>
+                    <label className="block text-zinc-700 text-sm font-medium mb-2">שם מלא *</label>
                     <input
                       type="text"
                       required
                       value={form.name}
                       onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                       placeholder="ישראל ישראלי"
-                      className="w-full bg-zinc-900 border border-zinc-700 rounded-md px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#c8a84a] text-sm"
+                      className="w-full bg-[#f0ede4] border border-[#d4cdb8] rounded-md px-4 py-3 text-black placeholder-zinc-400 focus:outline-none focus:border-[#b59d5a] text-sm"
                     />
                   </div>
                   <div>
-                    <label className="block text-zinc-300 text-sm font-medium mb-2">טלפון</label>
+                    <label className="block text-zinc-700 text-sm font-medium mb-2">טלפון</label>
                     <input
                       type="tel"
                       value={form.phone}
                       onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
                       placeholder="050-0000000"
-                      className="w-full bg-zinc-900 border border-zinc-700 rounded-md px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#c8a84a] text-sm"
+                      className="w-full bg-[#f0ede4] border border-[#d4cdb8] rounded-md px-4 py-3 text-black placeholder-zinc-400 focus:outline-none focus:border-[#b59d5a] text-sm"
                       dir="ltr"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-zinc-300 text-sm font-medium mb-2">אימייל *</label>
+                  <label className="block text-zinc-700 text-sm font-medium mb-2">אימייל *</label>
                   <input
                     type="email"
                     required
                     value={form.email}
                     onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
                     placeholder="your@email.com"
-                    className="w-full bg-zinc-900 border border-zinc-700 rounded-md px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#c8a84a] text-sm"
+                    className="w-full bg-[#f0ede4] border border-[#d4cdb8] rounded-md px-4 py-3 text-black placeholder-zinc-400 focus:outline-none focus:border-[#b59d5a] text-sm"
                     dir="ltr"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-zinc-300 text-sm font-medium mb-2">נושא</label>
+                  <label className="block text-zinc-700 text-sm font-medium mb-2">נושא</label>
                   <select
                     value={form.subject}
                     onChange={(e) => setForm((f) => ({ ...f, subject: e.target.value }))}
-                    className="w-full bg-zinc-900 border border-zinc-700 rounded-md px-4 py-3 text-white focus:outline-none focus:border-[#c8a84a] text-sm"
+                    className="w-full bg-[#f0ede4] border border-[#d4cdb8] rounded-md px-4 py-3 text-black focus:outline-none focus:border-[#b59d5a] text-sm"
                   >
                     <option value="">בחר נושא</option>
                     {subjects.map((s) => (
@@ -211,21 +211,21 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="block text-zinc-300 text-sm font-medium mb-2">הודעה *</label>
+                  <label className="block text-zinc-700 text-sm font-medium mb-2">הודעה *</label>
                   <textarea
                     required
                     value={form.message}
                     onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
                     rows={5}
                     placeholder="ספר לנו על עצמך ועל מה שאתה מחפש..."
-                    className="w-full bg-zinc-900 border border-zinc-700 rounded-md px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:border-[#c8a84a] text-sm resize-none"
+                    className="w-full bg-[#f0ede4] border border-[#d4cdb8] rounded-md px-4 py-3 text-black placeholder-zinc-400 focus:outline-none focus:border-[#b59d5a] text-sm resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-[#c8a84a] hover:bg-[#d4b86a] text-black py-4 rounded-md font-black text-base transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                  className="w-full bg-[#b59d5a] hover:bg-[#c4ad6a] text-black py-4 rounded-md font-black text-base transition-all disabled:opacity-50 flex items-center justify-center gap-2"
                 >
                   {loading && (
                     <span className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin" />
@@ -238,8 +238,8 @@ export default function ContactPage() {
         </div>
 
         {/* FAQ teaser */}
-        <div className="mt-16 bg-[#141414] border border-zinc-800 rounded-xl p-8">
-          <h3 className="text-white font-bold text-xl mb-6 text-center">שאלות נפוצות</h3>
+        <div className="mt-16 bg-[#f7f5ee] border border-[#e0d9c8] rounded-xl p-8">
+          <h3 className="text-black font-bold text-xl mb-6 text-center">שאלות נפוצות</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {[
               { q: 'כמה זמן לוקח ייצור הנרתיק?', a: '7-14 ימי עסקים מרגע אישור ההזמנה.' },
@@ -247,9 +247,9 @@ export default function ContactPage() {
               { q: 'מה ההבדל בין DCC ל-Ulticlip?', a: 'שניהם מחברים איכותיים — Ulticlip מאפשר שמירה ללא חגורה.' },
               { q: 'האם יש אחריות?', a: 'כן — אחריות שנה על כל פגם ייצור.' },
             ].map((item, i) => (
-              <div key={i} className="bg-zinc-900/50 rounded-lg p-4">
-                <p className="text-white font-semibold text-sm mb-2">{item.q}</p>
-                <p className="text-zinc-400 text-sm">{item.a}</p>
+              <div key={i} className="bg-[#f0ede4]/80 rounded-lg p-4">
+                <p className="text-black font-semibold text-sm mb-2">{item.q}</p>
+                <p className="text-zinc-600 text-sm">{item.a}</p>
               </div>
             ))}
           </div>

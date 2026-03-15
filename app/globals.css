@@ -2,22 +2,22 @@
 
 /* ─── Custom theme tokens ──────────────────────────────────────────────── */
 @theme {
-  --color-gold:       #c8a84a;
-  --color-gold-light: #d4b86a;
-  --color-dark-950:   #0a0a0a;
-  --color-dark-900:   #0f0f0f;
-  --color-dark-800:   #141414;
-  --color-dark-700:   #1a1a1a;
-  --color-dark-600:   #222222;
+  --color-gold:       #b59d5a;
+  --color-gold-light: #c4ad6a;
+  --color-cream-50:   #ffffff;
+  --color-cream-100:  #f7f5ee;
+  --color-cream-200:  #f0ede4;
+  --color-cream-300:  #e8e4d8;
+  --color-cream-400:  #e0d9c8;
 }
 
 /* ─── Base variables ────────────────────────────────────────────────────── */
 :root {
-  --bg: #0a0a0a;
-  --fg: #f0f0f0;
-  --gold: #c8a84a;
-  --gold-light: #d4b86a;
-  --border: #2a2a2a;
+  --bg: #ffffff;
+  --fg: #0a0a0a;
+  --gold: #b59d5a;
+  --gold-light: #c4ad6a;
+  --border: #e0d9c8;
 }
 
 /* ─── Global reset & base ───────────────────────────────────────────────── */
@@ -43,8 +43,8 @@ body {
 
 /* ─── Selection ─────────────────────────────────────────────────────────── */
 ::selection {
-  background-color: rgba(200, 168, 74, 0.25);
-  color: #fff;
+  background-color: rgba(181, 157, 90, 0.25);
+  color: #0a0a0a;
 }
 
 /* ─── Scrollbar ─────────────────────────────────────────────────────────── */
@@ -53,14 +53,14 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #111;
+  background: #f7f5ee;
 }
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #c8bfa8;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #b59d5a;
 }
 
 /* ─── Focus ring ─────────────────────────────────────────────────────────── */
@@ -86,13 +86,13 @@ body {
 
 /* ─── Prose (blog content) ──────────────────────────────────────────────── */
 .prose {
-  color: #d1d5db;
+  color: #3a3530;
   max-width: 65ch;
   line-height: 1.8;
 }
 
 .prose h2 {
-  color: #fff;
+  color: #0a0a0a;
   font-size: 1.5rem;
   font-weight: 800;
   margin-top: 2rem;
@@ -100,7 +100,7 @@ body {
 }
 
 .prose h3 {
-  color: #f4f4f5;
+  color: #1a1a14;
   font-size: 1.2rem;
   font-weight: 700;
   margin-top: 1.5rem;
@@ -166,7 +166,7 @@ input[type="email"],
 input[type="text"],
 select,
 textarea {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 /* Prevent zoom on iOS */

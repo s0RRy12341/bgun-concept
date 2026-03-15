@@ -6,11 +6,11 @@ interface BadgeProps {
 
 export default function Badge({ children, variant = 'gold', className = '' }: BadgeProps) {
   const variants = {
-    gold: 'bg-[#c8a84a] text-black',
-    new: 'bg-blue-600 text-white',
-    sale: 'bg-red-600 text-white',
-    info: 'bg-zinc-700 text-zinc-300',
-    success: 'bg-green-700 text-green-100',
+    gold: 'bg-[#b59d5a] text-black',
+    new: 'bg-blue-500 text-white',
+    sale: 'bg-red-500 text-white',
+    info: 'bg-zinc-200 text-zinc-700',
+    success: 'bg-green-100 text-green-700',
   };
 
   return (

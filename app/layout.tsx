@@ -58,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="he" dir="rtl" className={heebo.variable}>
-      <body className={`${heebo.className} antialiased bg-[#0a0a0a] text-white`}>
+      <body className={`${heebo.className} antialiased bg-white text-black`}>
         <CartProvider>
           <WishlistProvider>
             <Header />

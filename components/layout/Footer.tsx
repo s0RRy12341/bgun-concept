@@ -19,23 +19,23 @@ const infoLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] border-t border-zinc-800 pt-16 pb-8">
+    <footer className="bg-[#f7f5ee] border-t border-[#e0d9c8] pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-[#c8a84a] rounded flex items-center justify-center font-black text-black text-lg">
+              <div className="w-10 h-10 bg-[#b59d5a] rounded flex items-center justify-center font-black text-black text-lg">
                 B
               </div>
               <div>
-                <div className="text-white font-black text-base">B-GUN</div>
-                <div className="text-[#c8a84a] text-[10px] font-semibold tracking-widest uppercase">
+                <div className="text-black font-black text-base">B-GUN</div>
+                <div className="text-[#b59d5a] text-[10px] font-semibold tracking-widest uppercase">
                   Boutique Holster
                 </div>
               </div>
             </Link>
-            <p className="text-zinc-400 text-sm leading-relaxed mb-4">
+            <p className="text-zinc-600 text-sm leading-relaxed mb-4">
               נרתיקי Kydex פרימיום, מיוצרים בישראל בעבודת יד. כל נרתיק מותאם אישית לכלי הנשק שלך.
             </p>
             <div className="flex items-center gap-3">
@@ -43,7 +43,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-zinc-800 hover:bg-[#c8a84a] hover:text-black text-zinc-400 rounded flex items-center justify-center transition-all"
+                className="w-9 h-9 bg-[#e8e4d8] hover:bg-[#b59d5a] hover:text-black text-zinc-500 rounded flex items-center justify-center transition-all"
                 aria-label="פייסבוק"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -54,7 +54,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-zinc-800 hover:bg-[#c8a84a] hover:text-black text-zinc-400 rounded flex items-center justify-center transition-all"
+                className="w-9 h-9 bg-[#e8e4d8] hover:bg-[#b59d5a] hover:text-black text-zinc-500 rounded flex items-center justify-center transition-all"
                 aria-label="אינסטגרם"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -65,7 +65,7 @@ export default function Footer() {
                 href="https://wa.me/972"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-zinc-800 hover:bg-[#c8a84a] hover:text-black text-zinc-400 rounded flex items-center justify-center transition-all"
+                className="w-9 h-9 bg-[#e8e4d8] hover:bg-[#b59d5a] hover:text-black text-zinc-500 rounded flex items-center justify-center transition-all"
                 aria-label="וואטסאפ"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -77,7 +77,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-bold text-base mb-4 pb-2 border-b border-zinc-800">
+            <h3 className="text-black font-bold text-base mb-4 pb-2 border-b border-[#e0d9c8]">
               קישורים מהירים
             </h3>
             <ul className="space-y-2">
@@ -85,7 +85,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-zinc-400 hover:text-[#c8a84a] text-sm transition-colors"
+                    className="text-zinc-600 hover:text-[#b59d5a] text-sm transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -96,7 +96,7 @@ export default function Footer() {
 
           {/* Info */}
           <div>
-            <h3 className="text-white font-bold text-base mb-4 pb-2 border-b border-zinc-800">
+            <h3 className="text-black font-bold text-base mb-4 pb-2 border-b border-[#e0d9c8]">
               מידע
             </h3>
             <ul className="space-y-2">
@@ -104,7 +104,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-zinc-400 hover:text-[#c8a84a] text-sm transition-colors"
+                    className="text-zinc-600 hover:text-[#b59d5a] text-sm transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -115,13 +115,13 @@ export default function Footer() {
 
           {/* Contact + Newsletter */}
           <div>
-            <h3 className="text-white font-bold text-base mb-4 pb-2 border-b border-zinc-800">
+            <h3 className="text-black font-bold text-base mb-4 pb-2 border-b border-[#e0d9c8]">
               צור קשר
             </h3>
             <div className="space-y-3 mb-6">
               <a
                 href="mailto:benny@bgun-holsters.com"
-                className="flex items-center gap-2 text-zinc-400 hover:text-[#c8a84a] text-sm transition-colors"
+                className="flex items-center gap-2 text-zinc-600 hover:text-[#b59d5a] text-sm transition-colors"
               >
                 <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
@@ -132,7 +132,7 @@ export default function Footer() {
                 href="https://www.bgun-holsters.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-zinc-400 hover:text-[#c8a84a] text-sm transition-colors"
+                className="flex items-center gap-2 text-zinc-600 hover:text-[#b59d5a] text-sm transition-colors"
               >
                 <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5a17.92 17.92 0 01-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
@@ -141,14 +141,14 @@ export default function Footer() {
               </a>
             </div>
 
-            <h4 className="text-white font-semibold text-sm mb-3">עדכונים ומבצעים</h4>
+            <h4 className="text-black font-semibold text-sm mb-3">עדכונים ומבצעים</h4>
             <div className="flex gap-2">
               <input
                 type="email"
                 placeholder="כתובת אימייל"
-                className="flex-1 bg-zinc-800 border border-zinc-700 rounded px-3 py-2 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-[#c8a84a]"
+                className="flex-1 bg-white border border-[#e0d9c8] rounded px-3 py-2 text-black placeholder-zinc-400 text-sm focus:outline-none focus:border-[#b59d5a]"
               />
-              <button className="bg-[#c8a84a] hover:bg-[#d4b86a] text-black px-4 py-2 rounded text-sm font-bold transition-colors">
+              <button className="bg-[#b59d5a] hover:bg-[#c4ad6a] text-black px-4 py-2 rounded text-sm font-bold transition-colors">
                 הרשמה
               </button>
             </div>
@@ -156,16 +156,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-zinc-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="border-t border-[#e0d9c8] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-zinc-500 text-sm text-center sm:text-right">
             © 2026 B-Gun Boutique Holster. כל הזכויות שמורות.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-[#c8a84a] font-bold text-sm">🇮🇱 Proudly Made In Israel</span>
+            <span className="text-[#b59d5a] font-bold text-sm">🇮🇱 Proudly Made In Israel</span>
             <div className="flex items-center gap-2">
-              {/* Payment icons placeholder */}
               {['VISA', 'MC', 'BIT', 'PAY'].map((p) => (
-                <span key={p} className="bg-zinc-800 border border-zinc-700 text-zinc-400 text-[10px] px-2 py-1 rounded font-mono">
+                <span key={p} className="bg-white border border-[#e0d9c8] text-zinc-500 text-[10px] px-2 py-1 rounded font-mono">
                   {p}
                 </span>
               ))}
