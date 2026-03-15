@@ -50,38 +50,43 @@ export default function HeroSection() {
   const slide = slides[current];
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#f0f0e8]">
+    <section
+      className="relative min-h-[90vh] flex items-center overflow-hidden"
+      style={{
+        backgroundImage: 'url(https://www.justintime.co.il/wp-content/uploads/2026/03/10395.webp)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/65" />
+
       {/* Subtle grid pattern */}
       <div
-        className="absolute inset-0 opacity-[0.06]"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(92,107,48,0.8) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(92,107,48,0.8) 1px, transparent 1px)
+            linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px',
         }}
       />
 
-      {/* Radial gradient overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(92,107,48,0.08)_0%,_transparent_70%)]" />
-
-      {/* Right decorative bar */}
-      <div className="absolute right-0 top-0 h-full w-1 bg-gradient-to-b from-transparent via-[#5c6b30]/40 to-transparent" />
-
       {/* Corner accents */}
-      <div className="absolute top-8 left-8 w-16 h-16 border-b border-r border-[#5c6b30]/30" />
-      <div className="absolute bottom-8 right-8 w-16 h-16 border-t border-l border-[#5c6b30]/30" />
+      <div className="absolute top-8 left-8 w-16 h-16 border-b border-r border-white/20" />
+      <div className="absolute bottom-8 right-8 w-16 h-16 border-t border-l border-white/20" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
         <div className="max-w-3xl">
           {/* Badge */}
           <div
-            className={`inline-flex items-center gap-2 bg-[#5c6b30]/15 border border-[#5c6b30]/40 rounded-full px-4 py-2 mb-6 transition-all duration-300 ${
+            className={`inline-flex items-center gap-2 bg-white/10 border border-white/25 rounded-full px-4 py-2 mb-6 transition-all duration-300 ${
               animating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
             }`}
           >
-            <span className="text-[#5c6b30] font-semibold text-sm">{slide.badge}</span>
+            <span className="text-white/90 font-semibold text-sm">{slide.badge}</span>
           </div>
 
           {/* Main headline */}
@@ -91,13 +96,13 @@ export default function HeroSection() {
             }`}
             style={{ transitionDelay: animating ? '0ms' : '50ms' }}
           >
-            <span className="text-black">{slide.title} </span>
-            <span className="text-[#5c6b30]">{slide.titleAccent}</span>
+            <span className="text-white">{slide.title} </span>
+            <span className="text-[#8aaa52]">{slide.titleAccent}</span>
           </h1>
 
           {/* Subtitle */}
           <p
-            className={`text-zinc-600 text-lg sm:text-xl leading-relaxed mb-10 max-w-2xl transition-all duration-300 ${
+            className={`text-white/75 text-lg sm:text-xl leading-relaxed mb-10 max-w-2xl transition-all duration-300 ${
               animating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
             }`}
             style={{ transitionDelay: animating ? '0ms' : '100ms' }}
@@ -114,13 +119,13 @@ export default function HeroSection() {
           >
             <Link
               href={slide.ctaLink}
-              className="bg-[#5c6b30] hover:bg-[#6e7f3a] text-white px-8 py-4 rounded-md font-black text-lg transition-all duration-200 shadow-lg shadow-[#5c6b30]/20 hover:shadow-[#5c6b30]/30 hover:scale-[1.02]"
+              className="bg-[#5c6b30] hover:bg-[#6e7f3a] text-white px-8 py-4 rounded-md font-black text-lg transition-all duration-200 shadow-lg shadow-black/30 hover:scale-[1.02]"
             >
               {slide.cta}
             </Link>
             <Link
               href={slide.secondaryLink}
-              className="border border-zinc-300 hover:border-zinc-500 text-zinc-600 hover:text-black px-8 py-4 rounded-md font-bold text-lg transition-all duration-200"
+              className="border border-white/40 hover:border-white/70 text-white/80 hover:text-white px-8 py-4 rounded-md font-bold text-lg transition-all duration-200 backdrop-blur-sm"
             >
               {slide.secondary}
             </Link>
@@ -136,8 +141,8 @@ export default function HeroSection() {
                 }`}
                 style={{ transitionDelay: animating ? '0ms' : `${200 + i * 50}ms` }}
               >
-                <div className="text-[#5c6b30] font-black text-2xl sm:text-3xl">{stat.value}</div>
-                <div className="text-zinc-500 text-xs mt-1">{stat.label}</div>
+                <div className="text-[#8aaa52] font-black text-2xl sm:text-3xl">{stat.value}</div>
+                <div className="text-white/55 text-xs mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -151,7 +156,7 @@ export default function HeroSection() {
             key={i}
             onClick={() => setCurrent(i)}
             className={`rounded-full transition-all duration-300 ${
-              i === current ? 'w-8 h-2 bg-[#5c6b30]' : 'w-2 h-2 bg-zinc-300 hover:bg-zinc-400'
+              i === current ? 'w-8 h-2 bg-[#8aaa52]' : 'w-2 h-2 bg-white/30 hover:bg-white/50'
             }`}
           />
         ))}
