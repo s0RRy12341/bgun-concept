@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+/* ─── Custom theme tokens ──────────────────────────────────────────────── */
+@theme {
+  --color-gold:       #c8a84a;
+  --color-gold-light: #d4b86a;
+  --color-dark-950:   #0a0a0a;
+  --color-dark-900:   #0f0f0f;
+  --color-dark-800:   #141414;
+  --color-dark-700:   #1a1a1a;
+  --color-dark-600:   #222222;
+}
+
+/* ─── Base variables ────────────────────────────────────────────────────── */
+:root {
+  --bg: #0a0a0a;
+  --fg: #f0f0f0;
+  --gold: #c8a84a;
+  --gold-light: #d4b86a;
+  --border: #2a2a2a;
+}
+
+/* ─── Global reset & base ───────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: 'Heebo', 'Arial Hebrew', Arial, sans-serif;
+  direction: rtl;
+  text-align: right;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Selection ─────────────────────────────────────────────────────────── */
+::selection {
+  background-color: rgba(200, 168, 74, 0.25);
+  color: #fff;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ─── Focus ring ─────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ─── Typography helpers ────────────────────────────────────────────────── */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ─── Prose (blog content) ──────────────────────────────────────────────── */
+.prose {
+  color: #d1d5db;
+  max-width: 65ch;
+  line-height: 1.8;
+}
+
+.prose h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose h3 {
+  color: #f4f4f5;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.prose ul {
+  list-style: disc;
+  padding-inline-start: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose ul li {
+  margin-bottom: 0.4rem;
+}
+
+.prose strong {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.prose a {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+/* ─── Animations ────────────────────────────────────────────────────────── */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* ─── Input / form overrides ────────────────────────────────────────────── */
+input[type="email"],
+input[type="text"],
+select,
+textarea {
+  color-scheme: dark;
+}
+
+/* Prevent zoom on iOS */
+@media screen and (max-width: 768px) {
+  input[type="email"],
+  input[type="text"],
+  select {
+    font-size: 16px;
+  }
+}
