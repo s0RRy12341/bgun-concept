@@ -51,9 +51,9 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <p className="text-zinc-400 text-sm">
-          <Link href="/" className="hover:text-[#b59d5a] transition-colors">בית</Link>
+          <Link href="/" className="hover:text-[#5c6b30] transition-colors">בית</Link>
           {' '}/{' '}
-          <Link href="/collections" className="hover:text-[#b59d5a] transition-colors">חנות</Link>
+          <Link href="/collections" className="hover:text-[#5c6b30] transition-colors">חנות</Link>
           {' '}/{' '}
           <span className="text-zinc-700">{product.name}</span>
         </p>
@@ -66,7 +66,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
           {/* Image gallery */}
           <div className="space-y-4">
             {/* Main image */}
-            <div className="aspect-square bg-[#f7f5ee] border border-[#e0d9c8] rounded-xl overflow-hidden relative">
+            <div className="aspect-square bg-[#f0f0e8] border border-[#d4d4cc] rounded-xl overflow-hidden relative">
               <ProductPlaceholder name={product.name} src={product.images[activeImage]} />
               {product.isNew && (
                 <div className="absolute top-4 right-4">
@@ -86,8 +86,8 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                 <button
                   key={i}
                   onClick={() => setActiveImage(i)}
-                  className={`w-20 h-20 bg-[#f7f5ee] border rounded-lg overflow-hidden transition-all ${
-                    activeImage === i ? 'border-[#b59d5a]' : 'border-[#e0d9c8] hover:border-[#c4bba8]'
+                  className={`w-20 h-20 bg-[#f0f0e8] border rounded-lg overflow-hidden transition-all ${
+                    activeImage === i ? 'border-[#5c6b30]' : 'border-[#d4d4cc] hover:border-[#b4b4ac]'
                   }`}
                 >
                   <ProductPlaceholder name={`${product.name} ${i + 1}`} src={img} small />
@@ -123,7 +123,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
 
             {/* Price */}
             <div className="flex items-baseline gap-4">
-              <span className="text-[#b59d5a] font-black text-4xl">₪{product.price.toLocaleString()}</span>
+              <span className="text-[#5c6b30] font-black text-4xl">₪{product.price.toLocaleString()}</span>
               {product.compareAtPrice && (
                 <span className="text-zinc-400 text-xl line-through">
                   ₪{product.compareAtPrice.toLocaleString()}
@@ -139,23 +139,23 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
             <p className="text-zinc-700 text-base leading-relaxed">{product.shortDescription}</p>
 
             {/* Made in Israel badge */}
-            <div className="flex items-center gap-2 bg-[#b59d5a]/10 border border-[#b59d5a]/25 rounded-lg px-4 py-3">
+            <div className="flex items-center gap-2 bg-[#5c6b30]/10 border border-[#5c6b30]/25 rounded-lg px-4 py-3">
               <span className="text-2xl">🇮🇱</span>
               <div>
-                <p className="text-[#b59d5a] font-bold text-sm">Proudly Made In Israel</p>
+                <p className="text-[#5c6b30] font-bold text-sm">Proudly Made In Israel</p>
                 <p className="text-zinc-600 text-xs">מיוצר בישראל, בעבודת יד, עם בקרת איכות ידנית</p>
               </div>
             </div>
 
             {/* Divider */}
-            <div className="border-t border-[#e0d9c8]" />
+            <div className="border-t border-[#d4d4cc]" />
 
             {/* Variant selectors */}
             {product.variants.map((variant) => (
               <div key={variant.name}>
                 <label className="text-zinc-700 font-semibold text-sm block mb-2">
                   {variant.name}:&nbsp;
-                  <span className="text-[#b59d5a] font-bold">
+                  <span className="text-[#5c6b30] font-bold">
                     {selectedVariants[variant.name]}
                   </span>
                 </label>
@@ -164,7 +164,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                   onChange={(e) =>
                     setSelectedVariants((prev) => ({ ...prev, [variant.name]: e.target.value }))
                   }
-                  className="w-full bg-[#f0ede4] border border-[#d4cdb8] text-black rounded-md px-4 py-3 focus:outline-none focus:border-[#b59d5a] text-sm"
+                  className="w-full bg-[#ebebе4] border border-[#c8c8c0] text-black rounded-md px-4 py-3 focus:outline-none focus:border-[#5c6b30] text-sm"
                 >
                   {variant.options.map((opt) => (
                     <option key={opt} value={opt}>{opt}</option>
@@ -176,19 +176,19 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
             {/* Quantity + Add to cart */}
             <div className="flex gap-3 items-stretch">
               {/* Quantity */}
-              <div className="flex items-center border border-[#d4cdb8] rounded-md overflow-hidden">
+              <div className="flex items-center border border-[#c8c8c0] rounded-md overflow-hidden">
                 <button
                   onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                  className="px-4 py-3 text-zinc-600 hover:text-black hover:bg-[#e8e4d8] transition-colors font-bold text-lg"
+                  className="px-4 py-3 text-zinc-600 hover:text-black hover:bg-[#e8e8e0] transition-colors font-bold text-lg"
                 >
                   −
                 </button>
-                <span className="px-5 py-3 text-black font-bold text-lg border-x border-[#d4cdb8]">
+                <span className="px-5 py-3 text-black font-bold text-lg border-x border-[#c8c8c0]">
                   {quantity}
                 </span>
                 <button
                   onClick={() => setQuantity((q) => q + 1)}
-                  className="px-4 py-3 text-zinc-600 hover:text-black hover:bg-[#e8e4d8] transition-colors font-bold text-lg"
+                  className="px-4 py-3 text-zinc-600 hover:text-black hover:bg-[#e8e8e0] transition-colors font-bold text-lg"
                 >
                   +
                 </button>
@@ -202,8 +202,8 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                   added
                     ? 'bg-green-600 text-black'
                     : product.inStock
-                    ? 'bg-[#b59d5a] hover:bg-[#c4ad6a] text-black hover:scale-[1.01]'
-                    : 'bg-[#e8e4d8] text-zinc-400 cursor-not-allowed'
+                    ? 'bg-[#5c6b30] hover:bg-[#6e7f3a] text-white hover:scale-[1.01]'
+                    : 'bg-[#e8e8e0] text-zinc-400 cursor-not-allowed'
                 }`}
               >
                 {added ? '✓ נוסף לעגלה!' : product.inStock ? 'הוסף לעגלה' : 'אזל מהמלאי'}
@@ -214,8 +214,8 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                 onClick={() => toggleItem(product)}
                 className={`p-3 border rounded-md transition-all ${
                   inWishlist
-                    ? 'border-[#b59d5a] bg-[#b59d5a]/10 text-[#b59d5a]'
-                    : 'border-[#d4cdb8] text-zinc-600 hover:border-zinc-400 hover:text-black'
+                    ? 'border-[#5c6b30] bg-[#5c6b30]/10 text-[#5c6b30]'
+                    : 'border-[#c8c8c0] text-zinc-600 hover:border-zinc-400 hover:text-black'
                 }`}
                 aria-label="רשימת משאלות"
               >
@@ -243,15 +243,15 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
         </div>
 
         {/* Tabs */}
-        <div className="mt-16 border-t border-[#e0d9c8] pt-10">
-          <div className="flex gap-1 mb-8 border-b border-[#e0d9c8]">
+        <div className="mt-16 border-t border-[#d4d4cc] pt-10">
+          <div className="flex gap-1 mb-8 border-b border-[#d4d4cc]">
             {tabs.map((tab) => (
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
                 className={`px-6 py-3 font-semibold text-sm transition-all border-b-2 -mb-px ${
                   activeTab === tab.key
-                    ? 'border-[#b59d5a] text-[#b59d5a]'
+                    ? 'border-[#5c6b30] text-[#5c6b30]'
                     : 'border-transparent text-zinc-600 hover:text-black'
                 }`}
               >
@@ -272,14 +272,14 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
             )}
 
             {activeTab === 'specs' && (
-              <div className="overflow-hidden rounded-lg border border-[#e0d9c8]">
+              <div className="overflow-hidden rounded-lg border border-[#d4d4cc]">
                 <table className="w-full text-sm">
                   <tbody>
                     {product.specifications.map((spec, i) => (
                       <tr
                         key={i}
-                        className={`border-b border-[#e0d9c8] last:border-0 ${
-                          i % 2 === 0 ? 'bg-[#f7f5ee]' : 'bg-white'
+                        className={`border-b border-[#d4d4cc] last:border-0 ${
+                          i % 2 === 0 ? 'bg-[#f0f0e8]' : 'bg-white'
                         }`}
                       >
                         <td className="px-5 py-3.5 text-zinc-600 font-medium w-1/3">{spec.label}</td>
@@ -314,7 +314,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
 
         {/* Related products */}
         {related.length > 0 && (
-          <div className="mt-16 border-t border-[#e0d9c8] pt-10">
+          <div className="mt-16 border-t border-[#d4d4cc] pt-10">
             <h2 className="text-black font-bold text-2xl mb-8">מוצרים קשורים</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {related.map((p) => (

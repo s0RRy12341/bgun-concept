@@ -9,10 +9,10 @@ export default function WishlistPage() {
 
   return (
     <>
-      <div className="bg-[#f7f5ee] border-b border-[#e0d9c8] py-10">
+      <div className="bg-[#f0f0e8] border-b border-[#d4d4cc] py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-zinc-400 text-sm mb-2">
-            <Link href="/" className="hover:text-[#b59d5a] transition-colors">בית</Link>
+            <Link href="/" className="hover:text-[#5c6b30] transition-colors">בית</Link>
             {' '}/{' '}
             <span className="text-zinc-700">רשימת משאלות</span>
           </p>
@@ -36,7 +36,7 @@ export default function WishlistPage() {
             <p className="text-zinc-400 text-lg mb-4">רשימת המשאלות שלך ריקה</p>
             <Link
               href="/collections"
-              className="inline-block bg-[#b59d5a] hover:bg-[#c4ad6a] text-black font-bold px-6 py-3 rounded-md transition-colors"
+              className="inline-block bg-[#5c6b30] hover:bg-[#6e7f3a] text-white font-bold px-6 py-3 rounded-md transition-colors"
             >
               עבור לחנות
             </Link>

@@ -23,9 +23,9 @@ export default function ProductPlaceholder({ name, src, small = false, className
   }
 
   return (
-    <div className={`w-full h-full bg-gradient-to-br from-[#e8e4d8] to-[#ddd8cc] flex flex-col items-center justify-center ${className}`}>
+    <div className={`w-full h-full bg-gradient-to-br from-[#e8e8e0] to-[#d4d4cc] flex flex-col items-center justify-center ${className}`}>
       <svg
-        className={`${small ? 'w-6 h-6' : 'w-10 h-10'} text-[#c8bfa8] mb-2`}
+        className={`${small ? 'w-6 h-6' : 'w-10 h-10'} text-[#b4b4ac] mb-2`}
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -39,7 +39,7 @@ export default function ProductPlaceholder({ name, src, small = false, className
         <circle cx="12" cy="12" r="2" />
       </svg>
       {!small && (
-        <span className="text-[#a89880] text-xs font-medium text-center px-3 leading-tight">
+        <span className="text-[#8c8c84] text-xs font-medium text-center px-3 leading-tight">
           {name}
         </span>
       )}

@@ -26,23 +26,23 @@ export default function CartSidebar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-full sm:w-96 bg-white border-l border-[#e0d9c8] z-[70] flex flex-col transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-full sm:w-96 bg-white border-l border-[#d4d4cc] z-[70] flex flex-col transition-transform duration-300 ease-in-out ${
           state.isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between p-5 border-b border-[#e0d9c8]">
+        <div className="flex items-center justify-between p-5 border-b border-[#d4d4cc]">
           <div className="flex items-center gap-2">
             <h2 className="text-black font-bold text-lg">עגלת קניות</h2>
             {totalItems > 0 && (
-              <span className="bg-[#b59d5a] text-black text-xs font-bold px-2 py-0.5 rounded-full">
+              <span className="bg-[#5c6b30] text-white text-xs font-bold px-2 py-0.5 rounded-full">
                 {totalItems}
               </span>
             )}
           </div>
           <button
             onClick={closeCart}
-            className="p-2 text-zinc-500 hover:text-black hover:bg-[#f7f5ee] rounded-md transition-all"
+            className="p-2 text-zinc-500 hover:text-black hover:bg-[#f0f0e8] rounded-md transition-all"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -54,14 +54,14 @@ export default function CartSidebar() {
         <div className="flex-1 overflow-y-auto p-5 space-y-4">
           {state.items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-center py-16">
-              <svg className="w-16 h-16 text-[#e0d9c8] mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+              <svg className="w-16 h-16 text-[#d4d4cc] mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
               </svg>
               <p className="text-zinc-600 text-lg font-medium mb-2">העגלה ריקה</p>
               <p className="text-zinc-400 text-sm mb-6">הוסף מוצרים כדי להמשיך</p>
               <button
                 onClick={closeCart}
-                className="bg-[#b59d5a] hover:bg-[#c4ad6a] text-black px-6 py-3 rounded-md font-bold transition-colors"
+                className="bg-[#5c6b30] hover:bg-[#6e7f3a] text-white px-6 py-3 rounded-md font-bold transition-colors"
               >
                 המשך בקנייה
               </button>
@@ -70,10 +70,10 @@ export default function CartSidebar() {
             state.items.map((item) => (
               <div
                 key={item.product.id}
-                className="flex gap-4 bg-[#f7f5ee] rounded-lg p-3 border border-[#e0d9c8]"
+                className="flex gap-4 bg-[#f0f0e8] rounded-lg p-3 border border-[#d4d4cc]"
               >
                 {/* Product image */}
-                <div className="w-20 h-20 rounded overflow-hidden flex-shrink-0 bg-[#e8e4d8]">
+                <div className="w-20 h-20 rounded overflow-hidden flex-shrink-0 bg-[#e8e8e0]">
                   <ProductPlaceholder name={item.product.name} src={item.product.images[0]} small />
                 </div>
 
@@ -82,7 +82,7 @@ export default function CartSidebar() {
                   <Link
                     href={`/products/${item.product.slug}`}
                     onClick={closeCart}
-                    className="text-black font-medium text-sm hover:text-[#b59d5a] transition-colors line-clamp-2"
+                    className="text-black font-medium text-sm hover:text-[#5c6b30] transition-colors line-clamp-2"
                   >
                     {item.product.name}
                   </Link>
@@ -103,7 +103,7 @@ export default function CartSidebar() {
                     <div className="flex items-center gap-1">
                       <button
                         onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
-                        className="w-6 h-6 bg-[#e8e4d8] hover:bg-[#ddd8cc] text-black rounded text-sm flex items-center justify-center font-bold transition-colors"
+                        className="w-6 h-6 bg-[#e8e8e0] hover:bg-[#d4d4cc] text-black rounded text-sm flex items-center justify-center font-bold transition-colors"
                       >
                         −
                       </button>
@@ -112,14 +112,14 @@ export default function CartSidebar() {
                       </span>
                       <button
                         onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-                        className="w-6 h-6 bg-[#e8e4d8] hover:bg-[#ddd8cc] text-black rounded text-sm flex items-center justify-center font-bold transition-colors"
+                        className="w-6 h-6 bg-[#e8e8e0] hover:bg-[#d4d4cc] text-black rounded text-sm flex items-center justify-center font-bold transition-colors"
                       >
                         +
                       </button>
                     </div>
 
                     {/* Price */}
-                    <span className="text-[#b59d5a] font-bold text-sm">
+                    <span className="text-[#5c6b30] font-bold text-sm">
                       ₪{(item.product.price * item.quantity).toLocaleString()}
                     </span>
                   </div>
@@ -142,7 +142,7 @@ export default function CartSidebar() {
 
         {/* Footer summary */}
         {state.items.length > 0 && (
-          <div className="p-5 border-t border-[#e0d9c8] space-y-4">
+          <div className="p-5 border-t border-[#d4d4cc] space-y-4">
             <div className="flex justify-between items-center">
               <span className="text-zinc-600 text-sm">סה"כ לפני משלוח</span>
               <span className="text-black font-bold text-xl">₪{totalPrice.toLocaleString()}</span>
@@ -153,7 +153,7 @@ export default function CartSidebar() {
             <Link
               href="/checkout"
               onClick={closeCart}
-              className="block w-full bg-[#b59d5a] hover:bg-[#c4ad6a] text-black text-center py-4 rounded-md font-bold text-base transition-colors"
+              className="block w-full bg-[#5c6b30] hover:bg-[#6e7f3a] text-white text-center py-4 rounded-md font-bold text-base transition-colors"
             >
               ← לתשלום
             </Link>

@@ -13,9 +13,9 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <div className="bg-[#f7f5ee] border-b border-[#e0d9c8] py-14">
+      <div className="bg-[#f0f0e8] border-b border-[#d4d4cc] py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-[#b59d5a] font-semibold text-sm tracking-widest uppercase mb-3">
+          <p className="text-[#5c6b30] font-semibold text-sm tracking-widest uppercase mb-3">
             הבלוג שלנו
           </p>
           <h1 className="text-black font-black text-5xl mb-4">
@@ -30,17 +30,17 @@ export default function BlogPage() {
         <div className="mb-14">
           <Link
             href={`/blog/${featured.slug}`}
-            className="group block bg-[#f7f5ee] border border-[#e0d9c8] rounded-2xl overflow-hidden hover:border-[#b59d5a]/30 transition-all"
+            className="group block bg-[#f0f0e8] border border-[#d4d4cc] rounded-2xl overflow-hidden hover:border-[#5c6b30]/30 transition-all"
           >
             <div className="grid grid-cols-1 md:grid-cols-2">
               {/* Image placeholder */}
-              <div className="aspect-video md:aspect-auto md:min-h-[300px] bg-[#f0ede4] relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#e8e4d8] to-[#ddd8cc] group-hover:scale-105 transition-transform duration-500" />
+              <div className="aspect-video md:aspect-auto md:min-h-[300px] bg-[#ebebе4] relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#e8e8e0] to-[#d4d4cc] group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-6xl">📖</span>
                 </div>
                 <div className="absolute top-4 right-4">
-                  <span className="bg-[#b59d5a] text-black text-xs font-bold px-3 py-1.5 rounded">
+                  <span className="bg-[#5c6b30] text-white text-xs font-bold px-3 py-1.5 rounded">
                     מובחר
                   </span>
                 </div>
@@ -48,17 +48,17 @@ export default function BlogPage() {
 
               <div className="p-8 flex flex-col justify-center">
                 <div className="flex items-center gap-3 text-zinc-400 text-xs mb-4">
-                  <span className="bg-[#e8e4d8] px-3 py-1 rounded-full">{featured.category}</span>
+                  <span className="bg-[#e8e8e0] px-3 py-1 rounded-full">{featured.category}</span>
                   <span>•</span>
                   <span>{new Date(featured.date).toLocaleDateString('he-IL', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                   <span>•</span>
                   <span>{featured.readTime} דקות קריאה</span>
                 </div>
-                <h2 className="text-black font-black text-2xl sm:text-3xl leading-tight mb-4 group-hover:text-[#b59d5a] transition-colors">
+                <h2 className="text-black font-black text-2xl sm:text-3xl leading-tight mb-4 group-hover:text-[#5c6b30] transition-colors">
                   {featured.title}
                 </h2>
                 <p className="text-zinc-600 text-base leading-relaxed mb-6">{featured.excerpt}</p>
-                <div className="flex items-center gap-2 text-[#b59d5a] font-bold">
+                <div className="flex items-center gap-2 text-[#5c6b30] font-bold">
                   <span>קרא את המאמר המלא</span>
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -74,7 +74,7 @@ export default function BlogPage() {
           {blogCategories.map((cat) => (
             <button
               key={cat}
-              className="px-4 py-2 bg-[#e8e4d8] hover:bg-[#ddd8cc] text-zinc-700 hover:text-black text-sm rounded-md transition-colors first:bg-[#b59d5a] first:text-black"
+              className="px-4 py-2 bg-[#e8e8e0] hover:bg-[#d4d4cc] text-zinc-700 hover:text-black text-sm rounded-md transition-colors first:bg-[#5c6b30] first:text-white"
             >
               {cat}
             </button>
@@ -87,10 +87,10 @@ export default function BlogPage() {
             <Link
               key={post.id}
               href={`/blog/${post.slug}`}
-              className="group block bg-white border border-[#e0d9c8] rounded-xl overflow-hidden hover:border-[#b59d5a]/30 transition-all"
+              className="group block bg-white border border-[#d4d4cc] rounded-xl overflow-hidden hover:border-[#5c6b30]/30 transition-all"
             >
               {/* Image */}
-              <div className="aspect-video bg-[#f0ede4] relative overflow-hidden">
+              <div className="aspect-video bg-[#ebebе4] relative overflow-hidden">
                 <div
                   className="absolute inset-0 transition-transform duration-500 group-hover:scale-105"
                   style={{
@@ -103,7 +103,7 @@ export default function BlogPage() {
                   </svg>
                 </div>
                 <div className="absolute top-3 right-3">
-                  <span className="bg-[#b59d5a] text-black text-xs font-bold px-2 py-1 rounded">
+                  <span className="bg-[#5c6b30] text-white text-xs font-bold px-2 py-1 rounded">
                     {post.category}
                   </span>
                 </div>
@@ -115,7 +115,7 @@ export default function BlogPage() {
                   <span>•</span>
                   <span>{post.readTime} דקות</span>
                 </div>
-                <h3 className="text-black font-bold text-base leading-snug mb-3 group-hover:text-[#b59d5a] transition-colors line-clamp-2">
+                <h3 className="text-black font-bold text-base leading-snug mb-3 group-hover:text-[#5c6b30] transition-colors line-clamp-2">
                   {post.title}
                 </h3>
                 <p className="text-zinc-400 text-sm line-clamp-2 leading-relaxed">{post.excerpt}</p>

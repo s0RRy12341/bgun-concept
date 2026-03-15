@@ -2,22 +2,22 @@
 
 /* ─── Custom theme tokens ──────────────────────────────────────────────── */
 @theme {
-  --color-gold:       #b59d5a;
-  --color-gold-light: #c4ad6a;
+  --color-gold:       #5c6b30;
+  --color-gold-light: #6e7f3a;
   --color-cream-50:   #ffffff;
-  --color-cream-100:  #f7f5ee;
-  --color-cream-200:  #f0ede4;
-  --color-cream-300:  #e8e4d8;
-  --color-cream-400:  #e0d9c8;
+  --color-cream-100:  #f0f0e8;
+  --color-cream-200:  #ebebе4;
+  --color-cream-300:  #e8e8e0;
+  --color-cream-400:  #d4d4cc;
 }
 
 /* ─── Base variables ────────────────────────────────────────────────────── */
 :root {
   --bg: #ffffff;
   --fg: #0a0a0a;
-  --gold: #b59d5a;
-  --gold-light: #c4ad6a;
-  --border: #e0d9c8;
+  --gold: #5c6b30;
+  --gold-light: #6e7f3a;
+  --border: #d4d4cc;
 }
 
 /* ─── Global reset & base ───────────────────────────────────────────────── */
@@ -53,14 +53,14 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f7f5ee;
+  background: #f0f0e8;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c8bfa8;
+  background: #b4b4ac;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #b59d5a;
+  background: #5c6b30;
 }
 
 /* ─── Focus ring ─────────────────────────────────────────────────────────── */

@@ -15,7 +15,7 @@ export default function StarRating({ rating, maxStars = 5, size = 'sm' }: StarRa
         return (
           <svg
             key={i}
-            className={`${sizes[size]} ${filled ? 'text-[#b59d5a]' : partial ? 'text-[#b59d5a]' : 'text-zinc-300'}`}
+            className={`${sizes[size]} ${filled ? 'text-[#5c6b30]' : partial ? 'text-[#5c6b30]' : 'text-zinc-300'}`}
             fill={filled ? 'currentColor' : partial ? 'currentColor' : 'none'}
             stroke="currentColor"
             strokeWidth={filled || partial ? 0 : 1.5}

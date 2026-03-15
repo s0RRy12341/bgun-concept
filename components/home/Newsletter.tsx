@@ -15,7 +15,7 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="py-20 bg-[#f7f5ee] border-y border-[#e0d9c8] relative overflow-hidden">
+    <section className="py-20 bg-[#f0f0e8] border-y border-[#d4d4cc] relative overflow-hidden">
       {/* Background pattern */}
       <div
         className="absolute inset-0 opacity-[0.05]"
@@ -24,7 +24,7 @@ export default function Newsletter() {
           backgroundSize: '30px 30px',
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#f7f5ee] via-transparent to-[#f7f5ee]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#f0f0e8] via-transparent to-[#f0f0e8]" />
 
       <div className="relative max-w-2xl mx-auto px-4 sm:px-6 text-center">
         <div className="text-4xl mb-4">📬</div>
@@ -51,11 +51,11 @@ export default function Newsletter() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="כתובת האימייל שלך"
                 required
-                className="flex-1 bg-white border border-[#e0d9c8] rounded-md px-4 py-3.5 text-black placeholder-zinc-400 focus:outline-none focus:border-[#b59d5a] text-sm"
+                className="flex-1 bg-white border border-[#d4d4cc] rounded-md px-4 py-3.5 text-black placeholder-zinc-400 focus:outline-none focus:border-[#5c6b30] text-sm"
               />
               <button
                 type="submit"
-                className="bg-[#b59d5a] hover:bg-[#c4ad6a] text-black px-6 py-3.5 rounded-md font-bold whitespace-nowrap transition-colors"
+                className="bg-[#5c6b30] hover:bg-[#6e7f3a] text-white px-6 py-3.5 rounded-md font-bold whitespace-nowrap transition-colors"
               >
                 הרשמה
               </button>
@@ -73,7 +73,7 @@ export default function Newsletter() {
             { num: '0%', label: 'ספאם' },
           ].map((item, i) => (
             <div key={i} className="text-center">
-              <div className="text-[#b59d5a] font-black text-2xl">{item.num}</div>
+              <div className="text-[#5c6b30] font-black text-2xl">{item.num}</div>
               <div className="text-zinc-500 text-xs mt-0.5">{item.label}</div>
             </div>
           ))}

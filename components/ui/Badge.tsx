@@ -6,7 +6,7 @@ interface BadgeProps {
 
 export default function Badge({ children, variant = 'gold', className = '' }: BadgeProps) {
   const variants = {
-    gold: 'bg-[#b59d5a] text-black',
+    gold: 'bg-[#5c6b30] text-white',
     new: 'bg-blue-500 text-white',
     sale: 'bg-red-500 text-white',
     info: 'bg-zinc-200 text-zinc-700',
