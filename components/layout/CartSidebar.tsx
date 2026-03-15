@@ -155,7 +155,7 @@ export default function CartSidebar() {
               onClick={closeCart}
               className="block w-full bg-[#b59d5a] hover:bg-[#c4ad6a] text-black text-center py-4 rounded-md font-bold text-base transition-colors"
             >
-              לתשלום →
+              ← לתשלום
             </Link>
             <button
               onClick={closeCart}

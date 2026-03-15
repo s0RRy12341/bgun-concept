@@ -96,7 +96,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 }
                 if (line.startsWith('- ')) {
                   return (
-                    <li key={i} className="text-zinc-700 text-base leading-relaxed mb-1 mr-5">
+                    <li key={i} className="text-zinc-700 text-base leading-relaxed mb-1 ms-5">
                       {line.slice(2).replace(/\*\*(.*?)\*\*/g, (_, m) => m)}
                     </li>
                   );
