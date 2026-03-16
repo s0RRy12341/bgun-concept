@@ -9,15 +9,15 @@ export default function WishlistPage() {
 
   return (
     <>
-      <div className="bg-[#f0f0e8] border-b border-[#d4d4cc] py-10">
+      <div className="bg-[#1A1A1A] border-b border-[#333333] py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-zinc-400 text-sm mb-2">
-            <Link href="/" className="hover:text-[#5c6b30] transition-colors">בית</Link>
+          <p className="text-[#666666] text-sm mb-2">
+            <Link href="/" className="hover:text-white transition-colors">בית</Link>
             {' '}/{' '}
-            <span className="text-zinc-700">רשימת משאלות</span>
+            <span className="text-[#A0A0A0]">רשימת משאלות</span>
           </p>
-          <h1 className="text-black font-black text-4xl">רשימת המשאלות שלי</h1>
-          <p className="text-zinc-600 mt-2">{items.length} פריטים שמורים</p>
+          <h1 className="text-white font-black text-4xl">רשימת המשאלות שלי</h1>
+          <p className="text-[#A0A0A0] mt-2">{items.length} פריטים שמורים</p>
         </div>
       </div>
 
@@ -25,7 +25,7 @@ export default function WishlistPage() {
         {items.length === 0 ? (
           <div className="text-center py-24">
             <svg
-              className="w-16 h-16 text-zinc-200 mx-auto mb-4"
+              className="w-16 h-16 text-[#333333] mx-auto mb-4"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -33,10 +33,10 @@ export default function WishlistPage() {
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
             </svg>
-            <p className="text-zinc-400 text-lg mb-4">רשימת המשאלות שלך ריקה</p>
+            <p className="text-[#A0A0A0] text-lg mb-4">רשימת המשאלות שלך ריקה</p>
             <Link
               href="/collections"
-              className="inline-block bg-[#5c6b30] hover:bg-[#6e7f3a] text-white font-bold px-6 py-3 rounded-md transition-colors"
+              className="inline-block bg-[#C62828] hover:bg-[#D32F2F] text-white font-bold px-6 py-3 rounded-md transition-colors"
             >
               עבור לחנות
             </Link>

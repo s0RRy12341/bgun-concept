@@ -35,28 +35,28 @@ export default function Header() {
   return (
     <>
       {/* Top announcement bar */}
-      <div className="bg-[#5c6b30] text-white text-center py-2 text-sm font-semibold">
-        🇮🇱 משלוח חינם בהזמנות מעל ₪500 | ייצור בישראל | בקרת איכות ידנית
+      <div className="bg-[#C62828] text-white text-center py-2 text-sm font-semibold">
+        משלוח חינם בהזמנות מעל ₪500 &nbsp;|&nbsp; ייצור בישראל &nbsp;|&nbsp; בקרת איכות ידנית
       </div>
 
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-md shadow-black/10'
-            : 'bg-white'
-        } border-b border-[#d4d4cc]`}
+            ? 'bg-[#111111]/95 backdrop-blur-md shadow-md shadow-black/40'
+            : 'bg-[#111111]'
+        } border-b border-[#333333]`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
 
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-              <div className="w-10 h-10 bg-[#5c6b30] rounded flex items-center justify-center font-black text-white text-lg leading-none">
+              <div className="w-10 h-10 bg-[#C62828] rounded flex items-center justify-center font-black text-white text-lg leading-none">
                 B
               </div>
               <div className="leading-tight">
-                <div className="text-black font-black text-base tracking-tight">B-GUN</div>
-                <div className="text-[#5c6b30] text-[10px] font-semibold tracking-widest uppercase">
+                <div className="text-white font-black text-base tracking-tight">B-GUN</div>
+                <div className="text-[#A0A0A0] text-[10px] font-semibold tracking-widest uppercase">
                   Boutique Holster
                 </div>
               </div>
@@ -68,7 +68,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="px-4 py-2 text-sm font-medium text-zinc-600 hover:text-black hover:bg-[#f0f0e8] rounded-md transition-all duration-150"
+                  className="px-4 py-2 text-sm font-medium text-[#A0A0A0] hover:text-white hover:bg-white/5 rounded-md transition-all duration-150"
                 >
                   {link.label}
                 </Link>
@@ -80,7 +80,7 @@ export default function Header() {
               {/* Search */}
               <button
                 onClick={() => setSearchOpen(!searchOpen)}
-                className="p-2.5 text-zinc-500 hover:text-black hover:bg-[#f0f0e8] rounded-md transition-all"
+                className="p-2.5 text-[#A0A0A0] hover:text-white hover:bg-white/5 rounded-md transition-all"
                 aria-label="חיפוש"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -91,14 +91,14 @@ export default function Header() {
               {/* Wishlist */}
               <Link
                 href="/wishlist"
-                className="relative p-2.5 text-zinc-500 hover:text-black hover:bg-[#f0f0e8] rounded-md transition-all hidden sm:flex"
+                className="relative p-2.5 text-[#A0A0A0] hover:text-white hover:bg-white/5 rounded-md transition-all hidden sm:flex"
                 aria-label="רשימת משאלות"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                 </svg>
                 {wishlistItems.length > 0 && (
-                  <span className="absolute -top-1 -right-1 w-4 h-4 bg-[#5c6b30] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 w-4 h-4 bg-[#C62828] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                     {wishlistItems.length}
                   </span>
                 )}
@@ -107,14 +107,14 @@ export default function Header() {
               {/* Cart */}
               <button
                 onClick={openCart}
-                className="relative p-2.5 text-zinc-500 hover:text-black hover:bg-[#f0f0e8] rounded-md transition-all"
+                className="relative p-2.5 text-[#A0A0A0] hover:text-white hover:bg-white/5 rounded-md transition-all"
                 aria-label="עגלת קניות"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                 </svg>
                 {totalItems > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#5c6b30] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#C62828] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                     {totalItems}
                   </span>
                 )}
@@ -123,7 +123,7 @@ export default function Header() {
               {/* Mobile hamburger */}
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="lg:hidden p-2.5 text-zinc-500 hover:text-black hover:bg-[#f0f0e8] rounded-md transition-all"
+                className="lg:hidden p-2.5 text-[#A0A0A0] hover:text-white hover:bg-white/5 rounded-md transition-all"
                 aria-label="תפריט"
               >
                 {mobileOpen ? (
@@ -147,10 +147,10 @@ export default function Header() {
                   type="text"
                   placeholder="חפש נרתיק, דגם נשק..."
                   autoFocus
-                  className="w-full bg-[#f0f0e8] border border-[#d4d4cc] rounded-md px-4 py-3 text-black placeholder-zinc-400 focus:outline-none focus:border-[#5c6b30] text-sm"
+                  className="w-full bg-[#1A1A1A] border border-[#333333] rounded-md px-4 py-3 text-white placeholder-[#666666] focus:outline-none focus:border-[#C62828] text-sm"
                 />
                 <svg
-                  className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#666666]"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -167,13 +167,13 @@ export default function Header() {
       {/* Mobile menu overlay */}
       {mobileOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
-          <div className="absolute inset-0 bg-black/40" onClick={() => setMobileOpen(false)} />
-          <div className="absolute top-0 right-0 h-full w-80 bg-white border-l border-[#d4d4cc] flex flex-col">
-            <div className="flex items-center justify-between p-4 border-b border-[#d4d4cc]">
-              <span className="text-black font-bold text-lg">תפריט</span>
+          <div className="absolute inset-0 bg-black/60" onClick={() => setMobileOpen(false)} />
+          <div className="absolute top-0 right-0 h-full w-80 bg-[#111111] border-l border-[#333333] flex flex-col">
+            <div className="flex items-center justify-between p-4 border-b border-[#333333]">
+              <span className="text-white font-bold text-lg">תפריט</span>
               <button
                 onClick={() => setMobileOpen(false)}
-                className="p-2 text-zinc-500 hover:text-black"
+                className="p-2 text-[#A0A0A0] hover:text-white"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -187,17 +187,17 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="flex items-center py-3 px-4 text-zinc-700 hover:text-black hover:bg-[#f0f0e8] rounded-md text-lg font-medium transition-colors mb-1"
+                  className="flex items-center py-3 px-4 text-[#A0A0A0] hover:text-white hover:bg-white/5 rounded-md text-lg font-medium transition-colors mb-1"
                 >
                   {link.label}
                 </Link>
               ))}
             </nav>
 
-            <div className="p-4 border-t border-[#d4d4cc]">
-              <p className="text-zinc-500 text-sm text-center">📧 benny@bgun-holsters.com</p>
-              <p className="text-[#5c6b30] text-sm text-center mt-1 font-semibold">
-                🇮🇱 Proudly Made In Israel
+            <div className="p-4 border-t border-[#333333]">
+              <p className="text-[#666666] text-sm text-center">benny@bgun-holsters.com</p>
+              <p className="text-[#C62828] text-sm text-center mt-1 font-semibold">
+                Proudly Made In Israel
               </p>
             </div>
           </div>

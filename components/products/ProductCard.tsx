@@ -22,7 +22,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     : null;
 
   return (
-    <div className="group relative bg-white border border-[#d4d4cc] rounded-lg overflow-hidden transition-all duration-300 hover:border-[#5c6b30]/40 hover:shadow-xl hover:shadow-black/10">
+    <div className="group relative bg-[#1A1A1A] border border-[#333333] rounded-lg overflow-hidden transition-all duration-300 hover:border-[#C62828]/40 hover:shadow-xl hover:shadow-black/40">
       {/* Badges */}
       <div className="absolute top-3 right-3 z-10 flex flex-col gap-1">
         {product.isNew && <Badge variant="new">חדש</Badge>}
@@ -37,8 +37,8 @@ export default function ProductCard({ product }: ProductCardProps) {
         }}
         className={`absolute top-3 left-3 z-10 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
           inWishlist
-            ? 'bg-[#5c6b30] text-white'
-            : 'bg-white/80 text-zinc-400 opacity-0 group-hover:opacity-100'
+            ? 'bg-[#C62828] text-white'
+            : 'bg-black/60 text-[#A0A0A0] opacity-0 group-hover:opacity-100'
         }`}
         aria-label={inWishlist ? 'הסר מרשימת המשאלות' : 'הוסף לרשימת המשאלות'}
       >
@@ -55,7 +55,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
       {/* Image */}
       <Link href={`/products/${product.slug}`} className="block">
-        <div className="relative aspect-square overflow-hidden bg-[#f0f0e8]">
+        <div className="relative aspect-square overflow-hidden bg-[#151515]">
           <ProductPlaceholder name={product.name} src={product.images[0]} />
         </div>
       </Link>
@@ -63,21 +63,21 @@ export default function ProductCard({ product }: ProductCardProps) {
       {/* Info */}
       <div className="p-4">
         <Link href={`/products/${product.slug}`}>
-          <h3 className="text-black font-semibold text-sm hover:text-[#5c6b30] transition-colors line-clamp-2 leading-snug mb-1">
+          <h3 className="text-white font-semibold text-sm hover:text-[#C62828] transition-colors line-clamp-2 leading-snug mb-1">
             {product.name}
           </h3>
         </Link>
 
         <div className="flex items-center gap-1.5 mb-3">
           <StarRating rating={product.rating} />
-          <span className="text-zinc-400 text-xs">({product.reviewCount})</span>
+          <span className="text-[#666666] text-xs">({product.reviewCount})</span>
         </div>
 
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-[#5c6b30] font-bold text-lg">₪{product.price.toLocaleString()}</span>
+            <span className="text-[#C62828] font-bold text-lg">₪{product.price.toLocaleString()}</span>
             {product.compareAtPrice && (
-              <span className="text-zinc-400 text-sm line-through">
+              <span className="text-[#666666] text-sm line-through">
                 ₪{product.compareAtPrice.toLocaleString()}
               </span>
             )}
@@ -85,7 +85,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
           <button
             onClick={() => addItem(product, 1)}
-            className="bg-[#e8e8e0] hover:bg-[#5c6b30] hover:text-white text-zinc-600 p-2 rounded-md transition-all duration-200"
+            className="bg-[#333333] hover:bg-[#C62828] text-[#A0A0A0] hover:text-white p-2 rounded-md transition-all duration-200"
             aria-label="הוסף לעגלה"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

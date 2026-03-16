@@ -15,32 +15,31 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="py-20 bg-[#f0f0e8] border-y border-[#d4d4cc] relative overflow-hidden">
+    <section className="py-20 bg-[#151515] border-y border-[#333333] relative overflow-hidden">
       {/* Background pattern */}
       <div
-        className="absolute inset-0 opacity-[0.05]"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: `radial-gradient(circle, rgba(181,157,90,1) 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, rgba(198,40,40,1) 1px, transparent 1px)`,
           backgroundSize: '30px 30px',
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#f0f0e8] via-transparent to-[#f0f0e8]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#151515] via-transparent to-[#151515]" />
 
       <div className="relative max-w-2xl mx-auto px-4 sm:px-6 text-center">
-        <div className="text-4xl mb-4">📬</div>
-        <h2 className="text-black font-black text-3xl sm:text-4xl mb-3">
+        <p className="text-[#C62828] font-semibold text-sm tracking-widest uppercase mb-3">עדכונים ומבצעים</p>
+        <h2 className="text-white font-black text-3xl sm:text-4xl mb-3">
           הישאר מעודכן
         </h2>
-        <p className="text-zinc-600 text-lg mb-8">
+        <p className="text-[#A0A0A0] text-lg mb-8">
           מבצעים, מוצרים חדשים וטיפים לנשיאה — ישירות לתיבת הדואר שלך.
           ללא ספאם, ניתן לביטול בכל עת.
         </p>
 
         {submitted ? (
-          <div className="bg-green-50 border border-green-200 rounded-xl p-8">
-            <div className="text-5xl mb-3">✅</div>
-            <h3 className="text-green-700 font-bold text-xl mb-2">נרשמת בהצלחה!</h3>
-            <p className="text-zinc-600">תודה! נשמח לעדכן אותך על מבצעים ומוצרים חדשים.</p>
+          <div className="bg-[#1A1A1A] border border-[#333333] rounded-xl p-8">
+            <h3 className="text-white font-bold text-xl mb-2">נרשמת בהצלחה!</h3>
+            <p className="text-[#A0A0A0]">תודה! נשמח לעדכן אותך על מבצעים ומוצרים חדשים.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit}>
@@ -51,17 +50,17 @@ export default function Newsletter() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="כתובת האימייל שלך"
                 required
-                className="flex-1 bg-white border border-[#d4d4cc] rounded-md px-4 py-3.5 text-black placeholder-zinc-400 focus:outline-none focus:border-[#5c6b30] text-sm"
+                className="flex-1 bg-[#1A1A1A] border border-[#333333] rounded-md px-4 py-3.5 text-white placeholder-[#666666] focus:outline-none focus:border-[#C62828] text-sm"
               />
               <button
                 type="submit"
-                className="bg-[#5c6b30] hover:bg-[#6e7f3a] text-white px-6 py-3.5 rounded-md font-bold whitespace-nowrap transition-colors"
+                className="bg-[#C62828] hover:bg-[#D32F2F] text-white px-6 py-3.5 rounded-md font-bold whitespace-nowrap transition-colors"
               >
                 הרשמה
               </button>
             </div>
-            <p className="text-zinc-400 text-xs mt-3">
-              🔒 הפרטים שלך מאובטחים. ניתן לבטל הרשמה בכל עת.
+            <p className="text-[#666666] text-xs mt-3">
+              הפרטים שלך מאובטחים. ניתן לבטל הרשמה בכל עת.
             </p>
           </form>
         )}
@@ -73,8 +72,8 @@ export default function Newsletter() {
             { num: '0%', label: 'ספאם' },
           ].map((item, i) => (
             <div key={i} className="text-center">
-              <div className="text-[#5c6b30] font-black text-2xl">{item.num}</div>
-              <div className="text-zinc-500 text-xs mt-0.5">{item.label}</div>
+              <div className="text-[#C62828] font-black text-2xl">{item.num}</div>
+              <div className="text-[#666666] text-xs mt-0.5">{item.label}</div>
             </div>
           ))}
         </div>
