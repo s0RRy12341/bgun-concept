@@ -67,9 +67,10 @@ export default function HeroSection() {
         className="absolute inset-0 block sm:hidden"
         style={{
           backgroundImage: 'url(https://www.justintime.co.il/wp-content/uploads/2026/03/748.jpg)',
-          backgroundSize: 'cover',
+          backgroundSize: 'contain',
           backgroundPosition: 'center top',
           backgroundRepeat: 'no-repeat',
+          backgroundColor: '#0A0A0A',
         }}
       />
       {/* Dark overlay */}
