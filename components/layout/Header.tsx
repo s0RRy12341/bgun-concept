@@ -35,7 +35,7 @@ export default function Header() {
   return (
     <>
       {/* Top announcement bar */}
-      <div className="bg-[#C62828] text-white text-center py-2 text-sm font-semibold">
+      <div className="bg-[#bda775] text-white text-center py-2 text-sm font-semibold">
         משלוח חינם בהזמנות מעל ₪500 &nbsp;|&nbsp; ייצור בישראל &nbsp;|&nbsp; בקרת איכות ידנית
       </div>
 
@@ -51,7 +51,7 @@ export default function Header() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-              <div className="w-10 h-10 bg-[#C62828] rounded flex items-center justify-center font-black text-white text-lg leading-none">
+              <div className="w-10 h-10 bg-[#bda775] rounded flex items-center justify-center font-black text-white text-lg leading-none">
                 B
               </div>
               <div className="leading-tight">
@@ -98,7 +98,7 @@ export default function Header() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                 </svg>
                 {wishlistItems.length > 0 && (
-                  <span className="absolute -top-1 -right-1 w-4 h-4 bg-[#C62828] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 w-4 h-4 bg-[#bda775] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                     {wishlistItems.length}
                   </span>
                 )}
@@ -114,7 +114,7 @@ export default function Header() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                 </svg>
                 {totalItems > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#C62828] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#bda775] text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                     {totalItems}
                   </span>
                 )}
@@ -147,7 +147,7 @@ export default function Header() {
                   type="text"
                   placeholder="חפש נרתיק, דגם נשק..."
                   autoFocus
-                  className="w-full bg-[#1A1A1A] border border-[#333333] rounded-md px-4 py-3 text-white placeholder-[#666666] focus:outline-none focus:border-[#C62828] text-sm"
+                  className="w-full bg-[#1A1A1A] border border-[#333333] rounded-md px-4 py-3 text-white placeholder-[#666666] focus:outline-none focus:border-[#bda775] text-sm"
                 />
                 <svg
                   className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#666666]"
@@ -196,7 +196,7 @@ export default function Header() {
 
             <div className="p-4 border-t border-[#333333]">
               <p className="text-[#666666] text-sm text-center">benny@bgun-holsters.com</p>
-              <p className="text-[#C62828] text-sm text-center mt-1 font-semibold">
+              <p className="text-[#bda775] text-sm text-center mt-1 font-semibold">
                 Proudly Made In Israel
               </p>
             </div>

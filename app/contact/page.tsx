@@ -30,7 +30,7 @@ export default function ContactPage() {
       {/* Hero */}
       <div className="bg-[#1A1A1A] border-b border-[#333333] py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-[#C62828] font-semibold text-sm tracking-widest uppercase mb-3">
+          <p className="text-[#bda775] font-semibold text-sm tracking-widest uppercase mb-3">
             יצירת קשר
           </p>
           <h1 className="text-white font-black text-5xl mb-4">דבר איתנו</h1>
@@ -76,12 +76,12 @@ export default function ContactPage() {
                     target={item.href.startsWith('http') ? '_blank' : undefined}
                     rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   >
-                    <div className="w-12 h-12 bg-[#1A1A1A] border border-[#333333] rounded-xl flex items-center justify-center text-[#A0A0A0] group-hover:border-[#C62828]/40 group-hover:text-[#C62828] transition-all flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#1A1A1A] border border-[#333333] rounded-xl flex items-center justify-center text-[#A0A0A0] group-hover:border-[#bda775]/40 group-hover:text-[#bda775] transition-all flex-shrink-0">
                       {item.icon}
                     </div>
                     <div>
                       <p className="text-[#666666] text-xs">{item.label}</p>
-                      <p className="text-white font-medium group-hover:text-[#C62828] transition-colors">
+                      <p className="text-white font-medium group-hover:text-[#bda775] transition-colors">
                         {item.value}
                       </p>
                     </div>
@@ -98,7 +98,7 @@ export default function ContactPage() {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-[#1A1A1A] border border-[#333333] hover:border-[#C62828]/40 rounded-xl px-4 py-3 text-[#A0A0A0] hover:text-white transition-all text-sm"
+                  className="flex items-center gap-2 bg-[#1A1A1A] border border-[#333333] hover:border-[#bda775]/40 rounded-xl px-4 py-3 text-[#A0A0A0] hover:text-white transition-all text-sm"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -109,7 +109,7 @@ export default function ContactPage() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-[#1A1A1A] border border-[#333333] hover:border-[#C62828]/40 rounded-xl px-4 py-3 text-[#A0A0A0] hover:text-white transition-all text-sm"
+                  className="flex items-center gap-2 bg-[#1A1A1A] border border-[#333333] hover:border-[#bda775]/40 rounded-xl px-4 py-3 text-[#A0A0A0] hover:text-white transition-all text-sm"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z" />
@@ -122,7 +122,7 @@ export default function ContactPage() {
             {/* Response time note */}
             <div className="bg-[#1A1A1A] border border-[#333333] rounded-xl p-5">
               <div className="flex items-start gap-3">
-                <div className="text-[#C62828] flex-shrink-0 mt-0.5">
+                <div className="text-[#bda775] flex-shrink-0 mt-0.5">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -142,8 +142,8 @@ export default function ContactPage() {
           <div className="lg:col-span-3">
             {submitted ? (
               <div className="bg-[#1A1A1A] border border-[#333333] rounded-2xl p-12 text-center">
-                <div className="w-16 h-16 bg-[#C62828]/10 border border-[#C62828]/30 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-8 h-8 text-[#C62828]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <div className="w-16 h-16 bg-[#bda775]/10 border border-[#bda775]/30 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-8 h-8 text-[#bda775]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
@@ -153,7 +153,7 @@ export default function ContactPage() {
                 </p>
                 <button
                   onClick={() => { setSubmitted(false); setForm({ name: '', email: '', phone: '', subject: '', message: '' }); }}
-                  className="bg-[#C62828] hover:bg-[#D32F2F] text-white px-8 py-3 rounded-md font-bold transition-colors"
+                  className="bg-[#bda775] hover:bg-[#c9b088] text-white px-8 py-3 rounded-md font-bold transition-colors"
                 >
                   שלח הודעה נוספת
                 </button>
@@ -174,7 +174,7 @@ export default function ContactPage() {
                       value={form.name}
                       onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
                       placeholder="ישראל ישראלי"
-                      className="w-full bg-[#111111] border border-[#333333] rounded-md px-4 py-3 text-white placeholder-[#666666] focus:outline-none focus:border-[#C62828] text-sm"
+                      className="w-full bg-[#111111] border border-[#333333] rounded-md px-4 py-3 text-white placeholder-[#666666] focus:outline-none focus:border-[#bda775] text-sm"
                     />
                   </div>
                   <div>
@@ -184,7 +184,7 @@ export default function ContactPage() {
                       value={form.phone}
                       onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
                       placeholder="050-0000000"
-                      className="w-full bg-[#111111] border border-[#333333] rounded-md px-4 py-3 text-white placeholder-[#666666] focus:outline-none focus:border-[#C62828] text-sm"
+                      className="w-full bg-[#111111] border border-[#333333] rounded-md px-4 py-3 text-white placeholder-[#666666] focus:outline-none focus:border-[#bda775] text-sm"
                       dir="ltr"
                     />
                   </div>
@@ -198,7 +198,7 @@ export default function ContactPage() {
                     value={form.email}
                     onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
                     placeholder="your@email.com"
-                    className="w-full bg-[#111111] border border-[#333333] rounded-md px-4 py-3 text-white placeholder-[#666666] focus:outline-none focus:border-[#C62828] text-sm"
+                    className="w-full bg-[#111111] border border-[#333333] rounded-md px-4 py-3 text-white placeholder-[#666666] focus:outline-none focus:border-[#bda775] text-sm"
                     dir="ltr"
                   />
                 </div>
@@ -208,7 +208,7 @@ export default function ContactPage() {
                   <select
                     value={form.subject}
                     onChange={(e) => setForm((f) => ({ ...f, subject: e.target.value }))}
-                    className="w-full bg-[#111111] border border-[#333333] rounded-md px-4 py-3 text-white focus:outline-none focus:border-[#C62828] text-sm"
+                    className="w-full bg-[#111111] border border-[#333333] rounded-md px-4 py-3 text-white focus:outline-none focus:border-[#bda775] text-sm"
                   >
                     <option value="">בחר נושא</option>
                     {subjects.map((s) => (
@@ -225,14 +225,14 @@ export default function ContactPage() {
                     onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
                     rows={5}
                     placeholder="ספר לנו על עצמך ועל מה שאתה מחפש..."
-                    className="w-full bg-[#111111] border border-[#333333] rounded-md px-4 py-3 text-white placeholder-[#666666] focus:outline-none focus:border-[#C62828] text-sm resize-none"
+                    className="w-full bg-[#111111] border border-[#333333] rounded-md px-4 py-3 text-white placeholder-[#666666] focus:outline-none focus:border-[#bda775] text-sm resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-[#C62828] hover:bg-[#D32F2F] text-white py-4 rounded-md font-black text-base transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                  className="w-full bg-[#bda775] hover:bg-[#c9b088] text-white py-4 rounded-md font-black text-base transition-all disabled:opacity-50 flex items-center justify-center gap-2"
                 >
                   {loading && (
                     <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />

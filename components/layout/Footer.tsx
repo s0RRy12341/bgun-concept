@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-[#C62828] rounded flex items-center justify-center font-black text-white text-lg">
+              <div className="w-10 h-10 bg-[#bda775] rounded flex items-center justify-center font-black text-white text-lg">
                 B
               </div>
               <div>
@@ -43,7 +43,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-[#1A1A1A] hover:bg-[#C62828] text-[#A0A0A0] hover:text-white rounded flex items-center justify-center transition-all border border-[#333333] hover:border-[#C62828]"
+                className="w-9 h-9 bg-[#1A1A1A] hover:bg-[#bda775] text-[#A0A0A0] hover:text-white rounded flex items-center justify-center transition-all border border-[#333333] hover:border-[#bda775]"
                 aria-label="פייסבוק"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -54,7 +54,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-[#1A1A1A] hover:bg-[#C62828] text-[#A0A0A0] hover:text-white rounded flex items-center justify-center transition-all border border-[#333333] hover:border-[#C62828]"
+                className="w-9 h-9 bg-[#1A1A1A] hover:bg-[#bda775] text-[#A0A0A0] hover:text-white rounded flex items-center justify-center transition-all border border-[#333333] hover:border-[#bda775]"
                 aria-label="אינסטגרם"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -65,7 +65,7 @@ export default function Footer() {
                 href="https://wa.me/972"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 bg-[#1A1A1A] hover:bg-[#C62828] text-[#A0A0A0] hover:text-white rounded flex items-center justify-center transition-all border border-[#333333] hover:border-[#C62828]"
+                className="w-9 h-9 bg-[#1A1A1A] hover:bg-[#bda775] text-[#A0A0A0] hover:text-white rounded flex items-center justify-center transition-all border border-[#333333] hover:border-[#bda775]"
                 aria-label="וואטסאפ"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -146,9 +146,9 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="כתובת אימייל"
-                className="flex-1 bg-[#1A1A1A] border border-[#333333] rounded px-3 py-2 text-white placeholder-[#666666] text-sm focus:outline-none focus:border-[#C62828]"
+                className="flex-1 bg-[#1A1A1A] border border-[#333333] rounded px-3 py-2 text-white placeholder-[#666666] text-sm focus:outline-none focus:border-[#bda775]"
               />
-              <button className="bg-[#C62828] hover:bg-[#D32F2F] text-white px-4 py-2 rounded text-sm font-bold transition-colors">
+              <button className="bg-[#bda775] hover:bg-[#c9b088] text-white px-4 py-2 rounded text-sm font-bold transition-colors">
                 הרשמה
               </button>
             </div>

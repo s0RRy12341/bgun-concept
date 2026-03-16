@@ -36,7 +36,7 @@ export default function WishlistPage() {
             <p className="text-[#A0A0A0] text-lg mb-4">רשימת המשאלות שלך ריקה</p>
             <Link
               href="/collections"
-              className="inline-block bg-[#C62828] hover:bg-[#D32F2F] text-white font-bold px-6 py-3 rounded-md transition-colors"
+              className="inline-block bg-[#bda775] hover:bg-[#c9b088] text-white font-bold px-6 py-3 rounded-md transition-colors"
             >
               עבור לחנות
             </Link>

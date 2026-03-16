@@ -37,7 +37,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-[#C62828] font-semibold text-sm tracking-widest uppercase mb-3">
+          <p className="text-[#bda775] font-semibold text-sm tracking-widest uppercase mb-3">
             מה אומרים הלקוחות
           </p>
           <h2 className="text-white font-black text-4xl sm:text-5xl mb-4">
@@ -55,7 +55,7 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="bg-[#1A1A1A] border border-[#333333] rounded-xl p-6 hover:border-[#C62828]/40 transition-all duration-300"
+              className="bg-[#1A1A1A] border border-[#333333] rounded-xl p-6 hover:border-[#bda775]/40 transition-all duration-300"
             >
               {/* Stars */}
               <StarRating rating={t.rating} size="sm" />
@@ -68,7 +68,7 @@ export default function Testimonials() {
               </blockquote>
 
               {/* Product */}
-              <div className="text-[#C62828] text-xs font-medium mb-4 pb-4 border-b border-[#333333]">
+              <div className="text-[#bda775] text-xs font-medium mb-4 pb-4 border-b border-[#333333]">
                 {t.product}
               </div>
 
@@ -123,7 +123,7 @@ export default function Testimonials() {
             },
           ].map((badge, i) => (
             <div key={i} className="flex items-center gap-2 text-[#A0A0A0]">
-              <span className="text-[#C62828]">{badge.icon}</span>
+              <span className="text-[#bda775]">{badge.icon}</span>
               <span className="text-sm font-medium">{badge.label}</span>
             </div>
           ))}

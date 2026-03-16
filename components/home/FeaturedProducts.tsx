@@ -11,7 +11,7 @@ export default function FeaturedProducts() {
         {/* Header */}
         <div className="flex items-end justify-between mb-12">
           <div>
-            <p className="text-[#C62828] font-semibold text-sm tracking-widest uppercase mb-2">
+            <p className="text-[#bda775] font-semibold text-sm tracking-widest uppercase mb-2">
               המוצרים שלנו
             </p>
             <h2 className="text-white font-black text-4xl sm:text-5xl">
@@ -40,7 +40,7 @@ export default function FeaturedProducts() {
         <div className="text-center mt-10 sm:hidden">
           <Link
             href="/collections"
-            className="inline-block bg-[#1A1A1A] hover:bg-[#C62828] border border-[#333333] hover:border-[#C62828] text-white px-8 py-3 rounded-md font-bold transition-all duration-200"
+            className="inline-block bg-[#1A1A1A] hover:bg-[#bda775] border border-[#333333] hover:border-[#bda775] text-white px-8 py-3 rounded-md font-bold transition-all duration-200"
           >
             לכל המוצרים
           </Link>
@@ -83,7 +83,7 @@ export default function FeaturedProducts() {
             },
           ].map((item, i) => (
             <div key={i} className="flex items-center gap-2.5 text-[#A0A0A0] text-sm">
-              <span className="text-[#C62828]">{item.icon}</span>
+              <span className="text-[#bda775]">{item.icon}</span>
               <span>{item.text}</span>
               {i < 3 && <span className="hidden md:block text-[#333333] mx-2">|</span>}
             </div>

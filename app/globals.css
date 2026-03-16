@@ -2,8 +2,8 @@
 
 /* ─── Custom theme tokens ──────────────────────────────────────────────── */
 @theme {
-  --color-accent:       #C62828;
-  --color-accent-hover: #D32F2F;
+  --color-accent:       #bda775;
+  --color-accent-hover: #c9b088;
 }
 
 /* ─── Base variables ────────────────────────────────────────────────────── */
@@ -13,8 +13,8 @@
   --bg-tertiary:  #151515;
   --fg:           #FFFFFF;
   --fg-secondary: #A0A0A0;
-  --accent:       #C62828;
-  --accent-hover: #D32F2F;
+  --accent:       #bda775;
+  --accent-hover: #c9b088;
   --border:       #333333;
 }
 
@@ -58,7 +58,7 @@ body {
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C62828;
+  background: #bda775;
 }
 
 /* ─── Focus ring ─────────────────────────────────────────────────────────── */

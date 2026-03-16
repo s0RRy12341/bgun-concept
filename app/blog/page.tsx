@@ -15,7 +15,7 @@ export default function BlogPage() {
       {/* Header */}
       <div className="bg-[#1A1A1A] border-b border-[#333333] py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-[#C62828] font-semibold text-sm tracking-widest uppercase mb-3">
+          <p className="text-[#bda775] font-semibold text-sm tracking-widest uppercase mb-3">
             הבלוג שלנו
           </p>
           <h1 className="text-white font-black text-5xl mb-4">
@@ -30,7 +30,7 @@ export default function BlogPage() {
         <div className="mb-14">
           <Link
             href={`/blog/${featured.slug}`}
-            className="group block bg-[#1A1A1A] border border-[#333333] rounded-2xl overflow-hidden hover:border-[#C62828]/30 transition-all"
+            className="group block bg-[#1A1A1A] border border-[#333333] rounded-2xl overflow-hidden hover:border-[#bda775]/30 transition-all"
           >
             <div className="grid grid-cols-1 md:grid-cols-2">
               {/* Image placeholder */}
@@ -42,7 +42,7 @@ export default function BlogPage() {
                   </svg>
                 </div>
                 <div className="absolute top-4 right-4">
-                  <span className="bg-[#C62828] text-white text-xs font-bold px-3 py-1.5 rounded">
+                  <span className="bg-[#bda775] text-white text-xs font-bold px-3 py-1.5 rounded">
                     מובחר
                   </span>
                 </div>
@@ -56,11 +56,11 @@ export default function BlogPage() {
                   <span>•</span>
                   <span>{featured.readTime} דקות קריאה</span>
                 </div>
-                <h2 className="text-white font-black text-2xl sm:text-3xl leading-tight mb-4 group-hover:text-[#C62828] transition-colors">
+                <h2 className="text-white font-black text-2xl sm:text-3xl leading-tight mb-4 group-hover:text-[#bda775] transition-colors">
                   {featured.title}
                 </h2>
                 <p className="text-[#A0A0A0] text-base leading-relaxed mb-6">{featured.excerpt}</p>
-                <div className="flex items-center gap-2 text-[#C62828] font-bold">
+                <div className="flex items-center gap-2 text-[#bda775] font-bold">
                   <span>קרא את המאמר המלא</span>
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -76,7 +76,7 @@ export default function BlogPage() {
           {blogCategories.map((cat) => (
             <button
               key={cat}
-              className="px-4 py-2 bg-[#1A1A1A] hover:bg-[#333333] text-[#A0A0A0] hover:text-white text-sm rounded-md transition-colors border border-[#333333] first:bg-[#C62828] first:text-white first:border-[#C62828]"
+              className="px-4 py-2 bg-[#1A1A1A] hover:bg-[#333333] text-[#A0A0A0] hover:text-white text-sm rounded-md transition-colors border border-[#333333] first:bg-[#bda775] first:text-white first:border-[#bda775]"
             >
               {cat}
             </button>
@@ -89,7 +89,7 @@ export default function BlogPage() {
             <Link
               key={post.id}
               href={`/blog/${post.slug}`}
-              className="group block bg-[#1A1A1A] border border-[#333333] rounded-xl overflow-hidden hover:border-[#C62828]/30 transition-all"
+              className="group block bg-[#1A1A1A] border border-[#333333] rounded-xl overflow-hidden hover:border-[#bda775]/30 transition-all"
             >
               {/* Image */}
               <div className="aspect-video bg-[#151515] relative overflow-hidden">
@@ -105,7 +105,7 @@ export default function BlogPage() {
                   </svg>
                 </div>
                 <div className="absolute top-3 right-3">
-                  <span className="bg-[#C62828] text-white text-xs font-bold px-2 py-1 rounded">
+                  <span className="bg-[#bda775] text-white text-xs font-bold px-2 py-1 rounded">
                     {post.category}
                   </span>
                 </div>
@@ -117,7 +117,7 @@ export default function BlogPage() {
                   <span>•</span>
                   <span>{post.readTime} דקות</span>
                 </div>
-                <h3 className="text-white font-bold text-base leading-snug mb-3 group-hover:text-[#C62828] transition-colors line-clamp-2">
+                <h3 className="text-white font-bold text-base leading-snug mb-3 group-hover:text-[#bda775] transition-colors line-clamp-2">
                   {post.title}
                 </h3>
                 <p className="text-[#A0A0A0] text-sm line-clamp-2 leading-relaxed">{post.excerpt}</p>

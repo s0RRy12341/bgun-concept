@@ -27,7 +27,7 @@ export default function Newsletter() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#151515] via-transparent to-[#151515]" />
 
       <div className="relative max-w-2xl mx-auto px-4 sm:px-6 text-center">
-        <p className="text-[#C62828] font-semibold text-sm tracking-widest uppercase mb-3">עדכונים ומבצעים</p>
+        <p className="text-[#bda775] font-semibold text-sm tracking-widest uppercase mb-3">עדכונים ומבצעים</p>
         <h2 className="text-white font-black text-3xl sm:text-4xl mb-3">
           הישאר מעודכן
         </h2>
@@ -50,11 +50,11 @@ export default function Newsletter() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="כתובת האימייל שלך"
                 required
-                className="flex-1 bg-[#1A1A1A] border border-[#333333] rounded-md px-4 py-3.5 text-white placeholder-[#666666] focus:outline-none focus:border-[#C62828] text-sm"
+                className="flex-1 bg-[#1A1A1A] border border-[#333333] rounded-md px-4 py-3.5 text-white placeholder-[#666666] focus:outline-none focus:border-[#bda775] text-sm"
               />
               <button
                 type="submit"
-                className="bg-[#C62828] hover:bg-[#D32F2F] text-white px-6 py-3.5 rounded-md font-bold whitespace-nowrap transition-colors"
+                className="bg-[#bda775] hover:bg-[#c9b088] text-white px-6 py-3.5 rounded-md font-bold whitespace-nowrap transition-colors"
               >
                 הרשמה
               </button>
@@ -72,7 +72,7 @@ export default function Newsletter() {
             { num: '0%', label: 'ספאם' },
           ].map((item, i) => (
             <div key={i} className="text-center">
-              <div className="text-[#C62828] font-black text-2xl">{item.num}</div>
+              <div className="text-[#bda775] font-black text-2xl">{item.num}</div>
               <div className="text-[#666666] text-xs mt-0.5">{item.label}</div>
             </div>
           ))}

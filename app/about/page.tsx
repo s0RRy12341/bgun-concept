@@ -55,7 +55,7 @@ export default function AboutPage() {
           }}
         />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-[#C62828] font-semibold text-sm tracking-widest uppercase mb-4">מי אנחנו</p>
+          <p className="text-[#bda775] font-semibold text-sm tracking-widest uppercase mb-4">מי אנחנו</p>
           <h1 className="text-white font-black text-5xl sm:text-6xl mb-6 leading-tight">
             B-Gun Boutique Holster
           </h1>
@@ -72,7 +72,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Text */}
             <div>
-              <p className="text-[#C62828] font-semibold text-sm tracking-widest uppercase mb-4">הסיפור שלנו</p>
+              <p className="text-[#bda775] font-semibold text-sm tracking-widest uppercase mb-4">הסיפור שלנו</p>
               <h2 className="text-white font-black text-4xl mb-6">
                 מצורך אמיתי לעסק אמיתי
               </h2>
@@ -95,7 +95,7 @@ export default function AboutPage() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/collections"
-                  className="bg-[#C62828] hover:bg-[#D32F2F] text-white px-6 py-3 rounded-md font-bold transition-colors"
+                  className="bg-[#bda775] hover:bg-[#c9b088] text-white px-6 py-3 rounded-md font-bold transition-colors"
                 >
                   לחנות שלנו
                 </Link>
@@ -149,8 +149,8 @@ export default function AboutPage() {
                 },
               ].map((stat, i) => (
                 <div key={i} className="bg-[#1A1A1A] border border-[#333333] rounded-xl p-6 text-center">
-                  <div className="flex justify-center mb-3 text-[#C62828]">{stat.icon}</div>
-                  <div className="text-[#C62828] font-black text-3xl mb-1">{stat.value}</div>
+                  <div className="flex justify-center mb-3 text-[#bda775]">{stat.icon}</div>
+                  <div className="text-[#bda775] font-black text-3xl mb-1">{stat.value}</div>
                   <div className="text-[#A0A0A0] text-sm">{stat.label}</div>
                 </div>
               ))}
@@ -163,7 +163,7 @@ export default function AboutPage() {
       <section className="py-20 bg-[#1A1A1A] border-y border-[#333333]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-[#C62828] font-semibold text-sm tracking-widest uppercase mb-3">הפילוסופיה שלנו</p>
+            <p className="text-[#bda775] font-semibold text-sm tracking-widest uppercase mb-3">הפילוסופיה שלנו</p>
             <h2 className="text-white font-black text-4xl">מה מנחה אותנו</h2>
           </div>
 
@@ -206,8 +206,8 @@ export default function AboutPage() {
                 body: 'Kydex 0.08", מחברים פרימיום, ציוד חזק. לא מחפשים לחסוך על חשבון האיכות.',
               },
             ].map((v, i) => (
-              <div key={i} className="bg-[#111111] border border-[#333333] rounded-xl p-6 hover:border-[#C62828]/40 transition-all">
-                <div className="text-[#C62828] mb-4">{v.icon}</div>
+              <div key={i} className="bg-[#111111] border border-[#333333] rounded-xl p-6 hover:border-[#bda775]/40 transition-all">
+                <div className="text-[#bda775] mb-4">{v.icon}</div>
                 <h3 className="text-white font-bold text-lg mb-3">{v.title}</h3>
                 <p className="text-[#A0A0A0] text-sm leading-relaxed">{v.body}</p>
               </div>
@@ -220,7 +220,7 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-[#C62828] font-semibold text-sm tracking-widest uppercase mb-3">הדרך שלנו</p>
+            <p className="text-[#bda775] font-semibold text-sm tracking-widest uppercase mb-3">הדרך שלנו</p>
             <h2 className="text-white font-black text-4xl">הציר הכרונולוגי</h2>
           </div>
 
@@ -228,7 +228,7 @@ export default function AboutPage() {
             {timeline.map((item, i) => (
               <div key={i} className="flex gap-6">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 bg-[#C62828] rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#bda775] rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0">
                     {item.year.slice(-2)}
                   </div>
                   {i < timeline.length - 1 && (
@@ -236,7 +236,7 @@ export default function AboutPage() {
                   )}
                 </div>
                 <div className="pb-8">
-                  <div className="text-[#C62828] text-sm font-bold mb-1">{item.year}</div>
+                  <div className="text-[#bda775] text-sm font-bold mb-1">{item.year}</div>
                   <h3 className="text-white font-bold text-xl mb-2">{item.title}</h3>
                   <p className="text-[#A0A0A0] text-sm leading-relaxed">{item.description}</p>
                 </div>
@@ -249,16 +249,16 @@ export default function AboutPage() {
       {/* Team */}
       <section className="py-20 bg-[#1A1A1A] border-t border-[#333333]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          <p className="text-[#C62828] font-semibold text-sm tracking-widest uppercase mb-3">האנשים מאחורי המותג</p>
+          <p className="text-[#bda775] font-semibold text-sm tracking-widest uppercase mb-3">האנשים מאחורי המותג</p>
           <h2 className="text-white font-black text-4xl mb-12">הצוות שלנו</h2>
 
           {team.map((member, i) => (
             <div key={i} className="bg-[#111111] border border-[#333333] rounded-2xl p-10">
-              <div className="w-20 h-20 bg-[#C62828] rounded-full flex items-center justify-center text-white font-black text-2xl mx-auto mb-6">
+              <div className="w-20 h-20 bg-[#bda775] rounded-full flex items-center justify-center text-white font-black text-2xl mx-auto mb-6">
                 B
               </div>
               <h3 className="text-white font-black text-2xl mb-1">{member.name}</h3>
-              <p className="text-[#C62828] font-semibold text-sm mb-6">{member.role}</p>
+              <p className="text-[#bda775] font-semibold text-sm mb-6">{member.role}</p>
               <p className="text-[#A0A0A0] text-base leading-relaxed max-w-xl mx-auto">{member.description}</p>
 
               <div className="mt-8 pt-6 border-t border-[#333333]">
@@ -283,7 +283,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/collections"
-            className="inline-block bg-[#C62828] hover:bg-[#D32F2F] text-white px-8 py-4 rounded-md font-black text-lg transition-all hover:scale-[1.02]"
+            className="inline-block bg-[#bda775] hover:bg-[#c9b088] text-white px-8 py-4 rounded-md font-black text-lg transition-all hover:scale-[1.02]"
           >
             לחנות שלנו
           </Link>

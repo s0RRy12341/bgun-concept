@@ -55,7 +55,7 @@ export default function BrandValues() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <p className="text-[#C62828] font-semibold text-sm tracking-widest uppercase mb-3">
+          <p className="text-[#bda775] font-semibold text-sm tracking-widest uppercase mb-3">
             למה B-Gun?
           </p>
           <h2 className="text-white font-black text-4xl sm:text-5xl mb-4">
@@ -71,13 +71,13 @@ export default function BrandValues() {
           {values.map((val, index) => (
             <div
               key={index}
-              className="group relative bg-[#111111] border border-[#333333] rounded-xl p-6 hover:border-[#C62828]/50 transition-all duration-300 hover:bg-[#151515]"
+              className="group relative bg-[#111111] border border-[#333333] rounded-xl p-6 hover:border-[#bda775]/50 transition-all duration-300 hover:bg-[#151515]"
             >
               {/* Top accent line */}
-              <div className="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-[#C62828] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute top-0 left-6 right-6 h-0.5 bg-gradient-to-r from-transparent via-[#bda775] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               {/* Icon */}
-              <div className="text-[#C62828] mb-4">{val.icon}</div>
+              <div className="text-[#bda775] mb-4">{val.icon}</div>
 
               {/* Content */}
               <h3 className="text-white font-bold text-lg leading-snug mb-1">{val.title}</h3>
@@ -85,9 +85,9 @@ export default function BrandValues() {
               <p className="text-[#A0A0A0] text-sm leading-relaxed mb-5">{val.description}</p>
 
               {/* Detail badge */}
-              <div className="inline-flex items-center gap-1.5 bg-[#C62828]/10 border border-[#C62828]/25 rounded-full px-3 py-1">
-                <span className="w-1.5 h-1.5 bg-[#C62828] rounded-full" />
-                <span className="text-[#C62828] text-xs font-semibold">{val.detail}</span>
+              <div className="inline-flex items-center gap-1.5 bg-[#bda775]/10 border border-[#bda775]/25 rounded-full px-3 py-1">
+                <span className="w-1.5 h-1.5 bg-[#bda775] rounded-full" />
+                <span className="text-[#bda775] text-xs font-semibold">{val.detail}</span>
               </div>
             </div>
           ))}

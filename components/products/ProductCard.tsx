@@ -22,7 +22,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     : null;
 
   return (
-    <div className="group relative bg-[#1A1A1A] border border-[#333333] rounded-lg overflow-hidden transition-all duration-300 hover:border-[#C62828]/40 hover:shadow-xl hover:shadow-black/40">
+    <div className="group relative bg-[#1A1A1A] border border-[#333333] rounded-lg overflow-hidden transition-all duration-300 hover:border-[#bda775]/40 hover:shadow-xl hover:shadow-black/40">
       {/* Badges */}
       <div className="absolute top-3 right-3 z-10 flex flex-col gap-1">
         {product.isNew && <Badge variant="new">חדש</Badge>}
@@ -37,7 +37,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         }}
         className={`absolute top-3 left-3 z-10 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
           inWishlist
-            ? 'bg-[#C62828] text-white'
+            ? 'bg-[#bda775] text-white'
             : 'bg-black/60 text-[#A0A0A0] opacity-0 group-hover:opacity-100'
         }`}
         aria-label={inWishlist ? 'הסר מרשימת המשאלות' : 'הוסף לרשימת המשאלות'}
@@ -63,7 +63,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       {/* Info */}
       <div className="p-4">
         <Link href={`/products/${product.slug}`}>
-          <h3 className="text-white font-semibold text-sm hover:text-[#C62828] transition-colors line-clamp-2 leading-snug mb-1">
+          <h3 className="text-white font-semibold text-sm hover:text-[#bda775] transition-colors line-clamp-2 leading-snug mb-1">
             {product.name}
           </h3>
         </Link>
@@ -75,7 +75,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-[#C62828] font-bold text-lg">₪{product.price.toLocaleString()}</span>
+            <span className="text-[#bda775] font-bold text-lg">₪{product.price.toLocaleString()}</span>
             {product.compareAtPrice && (
               <span className="text-[#666666] text-sm line-through">
                 ₪{product.compareAtPrice.toLocaleString()}
@@ -85,7 +85,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
           <button
             onClick={() => addItem(product, 1)}
-            className="bg-[#333333] hover:bg-[#C62828] text-[#A0A0A0] hover:text-white p-2 rounded-md transition-all duration-200"
+            className="bg-[#333333] hover:bg-[#bda775] text-[#A0A0A0] hover:text-white p-2 rounded-md transition-all duration-200"
             aria-label="הוסף לעגלה"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

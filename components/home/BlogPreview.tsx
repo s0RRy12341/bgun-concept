@@ -10,7 +10,7 @@ export default function BlogPreview() {
         {/* Header */}
         <div className="flex items-end justify-between mb-12">
           <div>
-            <p className="text-[#C62828] font-semibold text-sm tracking-widest uppercase mb-2">
+            <p className="text-[#bda775] font-semibold text-sm tracking-widest uppercase mb-2">
               הבלוג שלנו
             </p>
             <h2 className="text-white font-black text-4xl sm:text-5xl leading-tight">
@@ -35,7 +35,7 @@ export default function BlogPreview() {
             <Link
               key={post.id}
               href={`/blog/${post.slug}`}
-              className="group block bg-[#111111] border border-[#333333] rounded-xl overflow-hidden hover:border-[#C62828]/40 transition-all duration-300"
+              className="group block bg-[#111111] border border-[#333333] rounded-xl overflow-hidden hover:border-[#bda775]/40 transition-all duration-300"
             >
               {/* Image placeholder */}
               <div className="aspect-video bg-[#151515] relative overflow-hidden">
@@ -52,7 +52,7 @@ export default function BlogPreview() {
                 </div>
                 {/* Category badge */}
                 <div className="absolute top-3 right-3">
-                  <span className="bg-[#C62828] text-white text-xs font-bold px-2 py-1 rounded">
+                  <span className="bg-[#bda775] text-white text-xs font-bold px-2 py-1 rounded">
                     {post.category}
                   </span>
                 </div>
@@ -66,7 +66,7 @@ export default function BlogPreview() {
                   <span>{post.readTime} דקות קריאה</span>
                 </div>
 
-                <h3 className="text-white font-bold text-base leading-snug mb-3 group-hover:text-[#C62828] transition-colors line-clamp-2">
+                <h3 className="text-white font-bold text-base leading-snug mb-3 group-hover:text-[#bda775] transition-colors line-clamp-2">
                   {post.title}
                 </h3>
 
@@ -74,7 +74,7 @@ export default function BlogPreview() {
                   {post.excerpt}
                 </p>
 
-                <div className="flex items-center gap-1 text-[#C62828] text-sm font-semibold">
+                <div className="flex items-center gap-1 text-[#bda775] text-sm font-semibold">
                   <span>קרא עוד</span>
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -89,7 +89,7 @@ export default function BlogPreview() {
         <div className="text-center mt-10 sm:hidden">
           <Link
             href="/blog"
-            className="inline-block border border-[#333333] hover:border-[#C62828] text-[#A0A0A0] hover:text-white px-8 py-3 rounded-md font-bold transition-all duration-200"
+            className="inline-block border border-[#333333] hover:border-[#bda775] text-[#A0A0A0] hover:text-white px-8 py-3 rounded-md font-bold transition-all duration-200"
           >
             לכל הפוסטים בבלוג
           </Link>

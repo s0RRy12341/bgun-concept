@@ -86,7 +86,7 @@ export default function HeroSection() {
               animating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'
             }`}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C62828]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#bda775]" />
             <span className="text-white/90 font-semibold text-sm">{slide.badge}</span>
           </div>
 
@@ -98,7 +98,7 @@ export default function HeroSection() {
             style={{ transitionDelay: animating ? '0ms' : '50ms' }}
           >
             <span className="text-white">{slide.title} </span>
-            <span className="text-[#C62828]">{slide.titleAccent}</span>
+            <span className="text-[#bda775]">{slide.titleAccent}</span>
           </h1>
 
           {/* Subtitle */}
@@ -120,7 +120,7 @@ export default function HeroSection() {
           >
             <Link
               href={slide.ctaLink}
-              className="bg-[#C62828] hover:bg-[#D32F2F] text-white px-8 py-4 rounded-md font-black text-lg transition-all duration-200 shadow-lg shadow-black/40 hover:scale-[1.02]"
+              className="bg-[#bda775] hover:bg-[#c9b088] text-white px-8 py-4 rounded-md font-black text-lg transition-all duration-200 shadow-lg shadow-black/40 hover:scale-[1.02]"
             >
               {slide.cta}
             </Link>
@@ -142,7 +142,7 @@ export default function HeroSection() {
                 }`}
                 style={{ transitionDelay: animating ? '0ms' : `${200 + i * 50}ms` }}
               >
-                <div className="text-[#C62828] font-black text-2xl sm:text-3xl">{stat.value}</div>
+                <div className="text-[#bda775] font-black text-2xl sm:text-3xl">{stat.value}</div>
                 <div className="text-white/50 text-xs mt-1">{stat.label}</div>
               </div>
             ))}
@@ -157,7 +157,7 @@ export default function HeroSection() {
             key={i}
             onClick={() => setCurrent(i)}
             className={`rounded-full transition-all duration-300 ${
-              i === current ? 'w-8 h-2 bg-[#C62828]' : 'w-2 h-2 bg-white/25 hover:bg-white/45'
+              i === current ? 'w-8 h-2 bg-[#bda775]' : 'w-2 h-2 bg-white/25 hover:bg-white/45'
             }`}
           />
         ))}

@@ -87,7 +87,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                   key={i}
                   onClick={() => setActiveImage(i)}
                   className={`w-20 h-20 bg-[#1A1A1A] border rounded-lg overflow-hidden transition-all ${
-                    activeImage === i ? 'border-[#C62828]' : 'border-[#333333] hover:border-[#555555]'
+                    activeImage === i ? 'border-[#bda775]' : 'border-[#333333] hover:border-[#555555]'
                   }`}
                 >
                   <ProductPlaceholder name={`${product.name} ${i + 1}`} src={img} small />
@@ -123,14 +123,14 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
 
             {/* Price */}
             <div className="flex items-baseline gap-4">
-              <span className="text-[#C62828] font-black text-4xl">₪{product.price.toLocaleString()}</span>
+              <span className="text-[#bda775] font-black text-4xl">₪{product.price.toLocaleString()}</span>
               {product.compareAtPrice && (
                 <span className="text-[#666666] text-xl line-through">
                   ₪{product.compareAtPrice.toLocaleString()}
                 </span>
               )}
               {product.compareAtPrice && (
-                <span className="bg-[#C62828]/10 border border-[#C62828]/30 text-[#C62828] text-sm font-bold px-2 py-1 rounded">
+                <span className="bg-[#bda775]/10 border border-[#bda775]/30 text-[#bda775] text-sm font-bold px-2 py-1 rounded">
                   חיסכון ₪{(product.compareAtPrice - product.price).toLocaleString()}
                 </span>
               )}
@@ -139,12 +139,12 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
             <p className="text-[#A0A0A0] text-base leading-relaxed">{product.shortDescription}</p>
 
             {/* Made in Israel badge */}
-            <div className="flex items-center gap-3 bg-[#C62828]/10 border border-[#C62828]/25 rounded-lg px-4 py-3">
-              <svg className="w-5 h-5 text-[#C62828] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+            <div className="flex items-center gap-3 bg-[#bda775]/10 border border-[#bda775]/25 rounded-lg px-4 py-3">
+              <svg className="w-5 h-5 text-[#bda775] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
               </svg>
               <div>
-                <p className="text-[#C62828] font-bold text-sm">Proudly Made In Israel</p>
+                <p className="text-[#bda775] font-bold text-sm">Proudly Made In Israel</p>
                 <p className="text-[#A0A0A0] text-xs">מיוצר בישראל, בעבודת יד, עם בקרת איכות ידנית</p>
               </div>
             </div>
@@ -157,7 +157,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
               <div key={variant.name}>
                 <label className="text-[#A0A0A0] font-semibold text-sm block mb-2">
                   {variant.name}:&nbsp;
-                  <span className="text-[#C62828] font-bold">
+                  <span className="text-[#bda775] font-bold">
                     {selectedVariants[variant.name]}
                   </span>
                 </label>
@@ -166,7 +166,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                   onChange={(e) =>
                     setSelectedVariants((prev) => ({ ...prev, [variant.name]: e.target.value }))
                   }
-                  className="w-full bg-[#1A1A1A] border border-[#333333] text-white rounded-md px-4 py-3 focus:outline-none focus:border-[#C62828] text-sm"
+                  className="w-full bg-[#1A1A1A] border border-[#333333] text-white rounded-md px-4 py-3 focus:outline-none focus:border-[#bda775] text-sm"
                 >
                   {variant.options.map((opt) => (
                     <option key={opt} value={opt}>{opt}</option>
@@ -204,7 +204,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                   added
                     ? 'bg-green-700 text-white'
                     : product.inStock
-                    ? 'bg-[#C62828] hover:bg-[#D32F2F] text-white hover:scale-[1.01]'
+                    ? 'bg-[#bda775] hover:bg-[#c9b088] text-white hover:scale-[1.01]'
                     : 'bg-[#333333] text-[#666666] cursor-not-allowed'
                 }`}
               >
@@ -216,7 +216,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                 onClick={() => toggleItem(product)}
                 className={`p-3 border rounded-md transition-all ${
                   inWishlist
-                    ? 'border-[#C62828] bg-[#C62828]/10 text-[#C62828]'
+                    ? 'border-[#bda775] bg-[#bda775]/10 text-[#bda775]'
                     : 'border-[#333333] text-[#A0A0A0] hover:border-[#555555] hover:text-white'
                 }`}
                 aria-label="רשימת משאלות"
@@ -264,7 +264,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                 },
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2 text-[#A0A0A0] text-sm">
-                  <span className="text-[#C62828]">{item.icon}</span>
+                  <span className="text-[#bda775]">{item.icon}</span>
                   <span>{item.text}</span>
                 </div>
               ))}
@@ -281,7 +281,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                 onClick={() => setActiveTab(tab.key)}
                 className={`px-6 py-3 font-semibold text-sm transition-all border-b-2 -mb-px ${
                   activeTab === tab.key
-                    ? 'border-[#C62828] text-[#C62828]'
+                    ? 'border-[#bda775] text-[#bda775]'
                     : 'border-transparent text-[#A0A0A0] hover:text-white'
                 }`}
               >
@@ -362,7 +362,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
                   },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
-                    <span className="text-[#C62828] mt-0.5 flex-shrink-0">{item.icon}</span>
+                    <span className="text-[#bda775] mt-0.5 flex-shrink-0">{item.icon}</span>
                     <div>
                       <h4 className="text-white font-bold mb-1">{item.title}</h4>
                       <p className="text-[#A0A0A0] text-sm leading-relaxed">{item.body}</p>

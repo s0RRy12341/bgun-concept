@@ -39,7 +39,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </p>
 
           <div className="flex items-center gap-3 mb-5">
-            <span className="bg-[#C62828] text-white text-xs font-bold px-3 py-1 rounded">
+            <span className="bg-[#bda775] text-white text-xs font-bold px-3 py-1 rounded">
               {post.category}
             </span>
             <span className="text-[#666666] text-sm">{post.readTime} דקות קריאה</span>
@@ -52,7 +52,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <p className="text-[#A0A0A0] text-lg leading-relaxed mb-8">{post.excerpt}</p>
 
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 bg-[#C62828] rounded-full flex items-center justify-center text-white font-black">
+            <div className="w-10 h-10 bg-[#bda775] rounded-full flex items-center justify-center text-white font-black">
               B
             </div>
             <div>
@@ -102,7 +102,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   );
                 }
                 if (line.startsWith('**') && line.endsWith('**')) {
-                  return <p key={i} className="text-[#C62828] font-bold text-base mt-4 mb-2">{line.slice(2, -2)}</p>;
+                  return <p key={i} className="text-[#bda775] font-bold text-base mt-4 mb-2">{line.slice(2, -2)}</p>;
                 }
                 if (line === '') return <br key={i} />;
                 return <p key={i} className="text-[#A0A0A0] text-base leading-relaxed mb-4">{line}</p>;
@@ -126,13 +126,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {/* Author card */}
             <div className="mt-8 bg-[#1A1A1A] border border-[#333333] rounded-xl p-6">
               <div className="flex items-start gap-4">
-                <div className="w-14 h-14 bg-[#C62828] rounded-full flex items-center justify-center text-white font-black text-xl flex-shrink-0">
+                <div className="w-14 h-14 bg-[#bda775] rounded-full flex items-center justify-center text-white font-black text-xl flex-shrink-0">
                   B
                 </div>
                 <div>
                   <p className="text-white font-bold">{post.author}</p>
                   <p className="text-[#A0A0A0] text-sm mt-1">מייסד B-Gun Boutique Holster, נושא נשק יומיומי ומומחה לנרתיקי Kydex מיוצרים בישראל.</p>
-                  <Link href="/about" className="text-[#C62828] text-sm hover:underline mt-2 inline-block">
+                  <Link href="/about" className="text-[#bda775] text-sm hover:underline mt-2 inline-block">
                     קרא עוד עלינו ←
                   </Link>
                 </div>
@@ -144,14 +144,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <aside className="lg:col-span-1 space-y-6">
             {/* CTA */}
             <div className="bg-[#1A1A1A] border border-[#333333] rounded-xl p-5 text-center sticky top-24">
-              <svg className="w-10 h-10 text-[#C62828] mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <svg className="w-10 h-10 text-[#bda775] mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
               </svg>
               <h3 className="text-white font-bold mb-2">מוכן לנרתיק?</h3>
               <p className="text-[#A0A0A0] text-sm mb-4">נרתיקי Kydex פרימיום, עשויים בישראל בהתאמה אישית.</p>
               <Link
                 href="/collections"
-                className="block w-full bg-[#C62828] hover:bg-[#D32F2F] text-white py-3 rounded-md font-bold text-sm transition-colors"
+                className="block w-full bg-[#bda775] hover:bg-[#c9b088] text-white py-3 rounded-md font-bold text-sm transition-colors"
               >
                 לחנות שלנו
               </Link>

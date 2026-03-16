@@ -35,7 +35,7 @@ export default function CartSidebar() {
           <div className="flex items-center gap-2">
             <h2 className="text-white font-bold text-lg">עגלת קניות</h2>
             {totalItems > 0 && (
-              <span className="bg-[#C62828] text-white text-xs font-bold px-2 py-0.5 rounded-full">
+              <span className="bg-[#bda775] text-white text-xs font-bold px-2 py-0.5 rounded-full">
                 {totalItems}
               </span>
             )}
@@ -61,7 +61,7 @@ export default function CartSidebar() {
               <p className="text-[#666666] text-sm mb-6">הוסף מוצרים כדי להמשיך</p>
               <button
                 onClick={closeCart}
-                className="bg-[#C62828] hover:bg-[#D32F2F] text-white px-6 py-3 rounded-md font-bold transition-colors"
+                className="bg-[#bda775] hover:bg-[#c9b088] text-white px-6 py-3 rounded-md font-bold transition-colors"
               >
                 המשך בקנייה
               </button>
@@ -82,7 +82,7 @@ export default function CartSidebar() {
                   <Link
                     href={`/products/${item.product.slug}`}
                     onClick={closeCart}
-                    className="text-white font-medium text-sm hover:text-[#C62828] transition-colors line-clamp-2"
+                    className="text-white font-medium text-sm hover:text-[#bda775] transition-colors line-clamp-2"
                   >
                     {item.product.name}
                   </Link>
@@ -119,7 +119,7 @@ export default function CartSidebar() {
                     </div>
 
                     {/* Price */}
-                    <span className="text-[#C62828] font-bold text-sm">
+                    <span className="text-[#bda775] font-bold text-sm">
                       ₪{(item.product.price * item.quantity).toLocaleString()}
                     </span>
                   </div>
@@ -153,7 +153,7 @@ export default function CartSidebar() {
             <Link
               href="/checkout"
               onClick={closeCart}
-              className="block w-full bg-[#C62828] hover:bg-[#D32F2F] text-white text-center py-4 rounded-md font-bold text-base transition-colors"
+              className="block w-full bg-[#bda775] hover:bg-[#c9b088] text-white text-center py-4 rounded-md font-bold text-base transition-colors"
             >
               ← לתשלום
             </Link>
