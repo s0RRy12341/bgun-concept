@@ -52,13 +52,26 @@ export default function HeroSection() {
   return (
     <section
       className="relative min-h-[90vh] flex items-center overflow-hidden"
-      style={{
-        backgroundImage: 'url(https://www.justintime.co.il/wp-content/uploads/2026/03/153544-1.webp)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      }}
     >
+      {/* Background images — desktop and mobile */}
+      <div
+        className="absolute inset-0 hidden sm:block"
+        style={{
+          backgroundImage: 'url(https://www.justintime.co.il/wp-content/uploads/2026/03/153544-1.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+      <div
+        className="absolute inset-0 block sm:hidden"
+        style={{
+          backgroundImage: 'url(https://www.justintime.co.il/wp-content/uploads/2026/03/748.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/55" />
 
